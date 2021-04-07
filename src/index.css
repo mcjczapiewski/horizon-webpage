@@ -72,8 +72,8 @@ code {
 }
 
 .Home .showrooms #wpg-museum {
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -104,10 +104,26 @@ code {
   margin-left: 15px;
 }
 
+.Home .showrooms .google-span #google-iframe {
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.Home .icon-horizon {
+  width: 35px;
+}
+
 .Home .logo-mainpage {
   margin: 2vh 0;
   width: 50%;
   max-width: 400px;
+}
+
+.Home #google-we-were-here {
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
 }
 
 .Home .changing {
@@ -145,6 +161,33 @@ code {
   max-width: 75px;
 }
 
+@media screen and (max-width: 1200px) {
+  .Home .showrooms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Home .showrooms .wpg-span #wpg-museum {
+    width: 100%;
+    height: 40%;
+  }
+  .Home .showrooms .google-span {
+    width: 100%;
+  }
+  .Home .showrooms .google-span #google-iframe {
+    width: 100%;
+    height: 50vh;
+  }
+  .Home #google-we-were-here {
+    width: 90vw;
+    height: 40vh;
+  }
+}
+
 @media screen and (max-device-width: 800px) {
   .Home .showrooms {
     -webkit-box-orient: vertical;
@@ -156,9 +199,16 @@ code {
     width: 100%;
     height: 40%;
   }
+  .Home .showrooms .google-span {
+    width: 100%;
+  }
   .Home .showrooms .google-span #google-iframe {
     width: 100%;
     height: 50vh;
+  }
+  .Home #google-we-were-here {
+    width: 90vw;
+    height: 40vh;
   }
 }
 /*# sourceMappingURL=index.css.map */

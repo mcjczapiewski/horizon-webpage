@@ -54,8 +54,8 @@ code {
         width          : 85vw;
 
         #wpg-museum {
-            width          : 450px;
-            height         : 450px;
+            width          : 500px;
+            height         : 500px;
             object-fit     : cover;
             object-position: center;
             box-sizing     : border-box;
@@ -75,13 +75,27 @@ code {
                     margin-left: 15px;
                 }
             }
+
+            #google-iframe {
+                box-shadow   : 4px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 30px;
+            }
         }
+    }
+
+    .icon-horizon {
+        width: 35px;
     }
 
     .logo-mainpage {
         margin   : 2vh 0;
         width    : 50%;
         max-width: 400px;
+    }
+
+    #google-we-were-here {
+        box-shadow   : 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
     }
 
     .changing {
@@ -115,6 +129,38 @@ code {
         }
     }
 
+    @media screen and(max-width: 1200px) {
+        .showrooms {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and(max-width: 800px) {
+        .showrooms {
+            .wpg-span {
+                #wpg-museum {
+                    width : 100%;
+                    height: 40%;
+                }
+            }
+
+            .google-span {
+                width: 100%;
+
+                #google-iframe {
+                    width : 100%;
+                    height: 50vh;
+                }
+            }
+        }
+
+        #google-we-were-here {
+            width : 90vw;
+            height: 40vh;
+
+        }
+    }
+
     @media screen and(max-device-width: 800px) {
         .showrooms {
             flex-direction: column;
@@ -127,11 +173,20 @@ code {
             }
 
             .google-span {
+                width: 100%;
+
                 #google-iframe {
                     width : 100%;
                     height: 50vh;
                 }
             }
         }
+
+        #google-we-were-here {
+            width : 90vw;
+            height: 40vh;
+
+        }
+
     }
 }
