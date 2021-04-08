@@ -10,7 +10,7 @@ function Home() {
                     <h3>
                         Wykonaliśmy panoramy 360° do spaceru wirtualnego
                         <br />
-                        po muzeum geodezyjnym:
+                        po Muzeum Geodezji:
                     </h3>
                     <a
                         href="https://www.wpg.com.pl/muzeum/"

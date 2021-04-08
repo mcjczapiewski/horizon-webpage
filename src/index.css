@@ -1,42 +1,3 @@
-html,
-body {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif;
-}
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.main {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
-  -webkit-transition: margin-top 0.5s;
-  transition: margin-top 0.5s;
-}
-
 .Home {
   text-align: center;
   display: -webkit-box;
@@ -71,7 +32,7 @@ code {
   width: 85vw;
 }
 
-.Home .showrooms #wpg-museum {
+.Home .showrooms .wpg-span #wpg-museum {
   width: 500px;
   height: 500px;
   -o-object-fit: cover;
@@ -83,6 +44,17 @@ code {
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+}
+
+.Home .showrooms .wpg-span #wpg-museum:hover {
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+}
+
+.Home .showrooms .google-span {
+  -ms-flex-item-align: normal;
+      -ms-grid-row-align: normal;
+      align-self: normal;
 }
 
 .Home .showrooms .google-span .google-text {
@@ -210,5 +182,45 @@ code {
     width: 90vw;
     height: 40vh;
   }
+}
+
+html,
+body {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.main {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-transition: margin-top 0.5s;
+  transition: margin-top 0.5s;
 }
 /*# sourceMappingURL=index.css.map */
