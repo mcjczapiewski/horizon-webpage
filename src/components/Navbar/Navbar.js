@@ -25,9 +25,6 @@ const Navbar = () => {
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.add("visible");
-            document
-                .getElementsByClassName("nav-menu")[0]
-                .classList.remove("active");
             setClickedMenuBtn(false);
         } else {
             document
@@ -48,7 +45,13 @@ const Navbar = () => {
     return (
         <>
             <nav className="navbar-items">
-                <NavLink className="navbar-logo" to="/aniapanato">
+                <NavLink
+                    className="navbar-logo"
+                    to="/aniapanato"
+                    onClick={() => {
+                        setClickedMenuBtn(false);
+                    }}
+                >
                     <img className="navbar-logo-img" src={logo} alt="" />
                 </NavLink>
                 <div className="menu-icon" onClick={handleClick}>
