@@ -1,27 +1,10 @@
 import wpg from "../assets/images/wpg.jpg";
 import mapsIcon from "../assets/images/maps-icon.png";
-import favicon from "../assets/images/just_blades.png";
-import "../../node_modules/three-dots/dist/three-dots.css";
 
 function Gallery() {
     return (
         <div className="Gallery">
             <div className="showrooms">
-                <span className="wpg-span">
-                    <h3>
-                        Wykonaliśmy panoramy 360° do spaceru wirtualnego
-                        <br />
-                        po Muzeum Geodezji:
-                    </h3>
-                    <a
-                        href="https://www.wpg.com.pl/muzeum/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img id="wpg-museum" src={wpg} alt="" />
-                    </a>
-                    <br />
-                </span>
                 <span className="google-span">
                     <span className="google-text">
                         <h3>Rozwijamy Google Street View</h3>
@@ -39,33 +22,30 @@ function Gallery() {
                         rel="noopener noreferrer"
                     ></iframe>
                 </span>
+                <span className="wpg-span">
+                    <h3>
+                        Wykonaliśmy panoramy 360° do spaceru wirtualnego
+                        <br />
+                        po Muzeum Geodezji:
+                    </h3>
+                    <a
+                        href="https://www.wpg.com.pl/muzeum/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img id="wpg-museum" src={wpg} alt="" />
+                    </a>
+                    <br />
+                </span>
             </div>
             <br />
-            <h4>
+            <p className="font-with-dark-bg">
                 Na życzenie wysyłamy na maila przykład
                 <br />
                 spaceru wirtualnego mieszkania.
                 <br />
                 Zapraszamy do kontaktu :-)
-            </h4>
-            <h2>
-                Zobacz gdzie już byliśmy!
-                <br />
-                Szukaj na mapie&nbsp;
-                <img className="icon-horizon" src={favicon} alt="" />
-            </h2>
-            <iframe
-                src="https://www.google.com/maps/d/u/1/embed?mid=1DMe7n9Y17vkRPAhOGwqRahjHLmZwJsx4"
-                width="500px"
-                height="500px"
-                title="we-were-here"
-                id="google-we-were-here"
-                rel="noopener noreferrer"
-            ></iframe>
-            <div className="changing">
-                <h2>Zmieniamy się dla Ciebie</h2>
-                <div className="dot-windmill"></div>
-            </div>
+            </p>
         </div>
     );
 }

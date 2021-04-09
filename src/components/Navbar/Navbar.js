@@ -18,7 +18,7 @@ const Navbar = ({}) => {
     }
 
     const onScroll = (e) => {
-        if (e.target.scrollTop > 200) {
+        if (e.target.scrollTop > 20) {
             document
                 .getElementsByClassName("navbar-items")[0]
                 .classList.add("hidden");

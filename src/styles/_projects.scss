@@ -1,0 +1,28 @@
+.Projects {
+    text-align: center;
+
+    h2 {
+        margin-top: 5px;
+        padding   : 0 10px;
+    }
+
+    .icon-horizon {
+        width: 45px;
+    }
+
+    #google-we-were-here {
+        height: calc(100vh - 250px);
+        width : 70vw;
+        @include rounded-shadow-border;
+    }
+
+    @media screen and (max-width:800px) {
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        #google-we-were-here {
+            width: 85vw;
+        }
+    }
+}

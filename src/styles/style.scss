@@ -2,6 +2,7 @@
 @import "./mixins";
 @import "./home";
 @import "./gallery";
+@import "./projects";
 @import "./navbar";
 @import "./copyrightBar";
 
@@ -19,17 +20,6 @@ body {
     background     : url("../assets/images/bg.jpg") center no-repeat;
     background-size: cover;
 }
-
-#myVideo {
-    position  : fixed;
-    right     : 0;
-    bottom    : 0;
-    min-width : 100%;
-    min-height: 100%;
-    z-index   : -1;
-}
-
-// TODO max width of page not to exceed logo, try to hide scroll!
 
 .main {
     position        : fixed;
@@ -56,7 +46,11 @@ body {
 
     @media screen and (max-device-width: 800px) {
         &.mobile-extend {
-            margin-top: 0;
+            margin-top: 0 !important;
         }
     }
+}
+
+.font-with-dark-bg {
+    color: white;
 }
