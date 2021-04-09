@@ -143,7 +143,7 @@
 @media screen and (max-device-width: 800px) {
   .Home .animated-title {
     left: 5%;
-    height: 50vmin;
+    height: 40vmin;
   }
   .Home .animated-title > div div {
     font-size: 7vmin;
@@ -223,6 +223,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Gallery .showrooms .google-span .google-text {
@@ -255,34 +258,8 @@
   width: 35px;
 }
 
-.Gallery .changing {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Gallery .changing h2 {
-  padding: 0 20px;
-}
-
-.Gallery .changing .dot-windmill {
-  background-color: #00adef;
-}
-
-.Gallery .changing .dot-windmill:before {
-  background-color: #00adef;
-}
-
-.Gallery .changing .dot-windmill:after {
-  background-color: #00adef;
+.Gallery .showroom-on-wish {
+  font-size: 2.5vh;
 }
 
 @media screen and (max-width: 1200px) {
@@ -319,6 +296,7 @@
 
 .Projects {
   text-align: center;
+  margin-top: 20px;
 }
 
 .Projects h2 {
@@ -331,7 +309,7 @@
 }
 
 .Projects #google-we-were-here {
-  height: calc(100vh - 250px);
+  height: calc(100vh - 300px);
   width: 70vw;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -344,6 +322,43 @@
   }
   .Projects #google-we-were-here {
     width: 85vw;
+  }
+}
+
+.Contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  width: 400px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.Contact .blue-with-outline {
+  color: #00acf0;
+  text-shadow: -0.25px 0.25px 1px #000, 0.25px 0.25px 1px #000, 0.25px -0.25px 0 #000, -0.25px -0.25px 0 #000;
+}
+
+.Contact .external-links img {
+  margin: 0 0.7vh;
+  max-width: 70px;
+}
+
+@media screen and (max-device-width: 800px) {
+  .Contact {
+    zoom: 75%;
   }
 }
 
@@ -366,8 +381,14 @@
   transition: top 0.5s;
 }
 
-.navbar-items.hidden-popup {
-  top: -1000px;
+.navbar-items .far {
+  position: fixed;
+  top: 500px;
+  right: 200px;
+}
+
+.navbar-items.animate {
+  top: -100px;
 }
 
 .navbar-logo {
@@ -438,12 +459,6 @@ ul li:last-of-type {
 
 .menu-icon {
   display: none;
-}
-
-@media screen and (max-width: 800px) {
-  .main {
-    margin-top: 75px !important;
-  }
 }
 
 @media screen and (max-width: 800px) and (max-device-width: 800px) {
@@ -578,14 +593,34 @@ ul li:last-of-type {
 
 .copyright-bar .external-links {
   position: relative;
-  margin-top: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
   margin-left: 30px;
   height: 100%;
+  width: 100px;
 }
 
 .copyright-bar .external-links img {
   margin: 0 0.7vh;
-  max-width: 35px;
+  max-width: 36px;
+}
+
+.copyright-bar .fa-arrow-alt-circle-up {
+  position: relative;
+  left: 50%;
+  bottom: 0;
+  font-size: 35px;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  color: #00acf0;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: bottom 0.5s ease;
+  transition: bottom 0.5s ease;
+}
+
+.copyright-bar .fa-arrow-alt-circle-up.visible {
+  bottom: 55px;
 }
 
 .copyright-bar .copyright {
@@ -623,11 +658,8 @@ body {
   bottom: 0;
   top: 0;
   left: 0;
-  margin-top: 100px;
   margin-bottom: 50px;
   overflow-y: auto;
-  -webkit-transition: margin-top 0.5s;
-  transition: margin-top 0.5s;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* IE and Edge */
   -ms-overflow-style: none;
@@ -639,9 +671,14 @@ body {
   display: none;
 }
 
-@media screen and (max-device-width: 800px) {
-  .main.mobile-extend {
-    margin-top: 0 !important;
+.inner-main {
+  position: relative;
+  top: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  .inner-main {
+    top: 80px;
   }
 }
 

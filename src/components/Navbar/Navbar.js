@@ -3,7 +3,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import logo from "../../logo.svg";
 
-const Navbar = ({}) => {
+const Navbar = () => {
     const [clickedMenuBtn, setClickedMenuBtn] = useState(false);
 
     function handleClick() {
@@ -18,13 +18,13 @@ const Navbar = ({}) => {
     }
 
     const onScroll = (e) => {
-        if (e.target.scrollTop > 20) {
+        if (e.target.scrollTop > 80) {
             document
                 .getElementsByClassName("navbar-items")[0]
-                .classList.add("hidden");
+                .classList.add("animate");
             document
-                .getElementsByClassName("main")[0]
-                .classList.add("mobile-extend");
+                .getElementsByClassName("fa-arrow-alt-circle-up")[0]
+                .classList.add("visible");
             document
                 .getElementsByClassName("nav-menu")[0]
                 .classList.remove("active");
@@ -32,10 +32,10 @@ const Navbar = ({}) => {
         } else {
             document
                 .getElementsByClassName("navbar-items")[0]
-                .classList.remove("hidden");
+                .classList.remove("animate");
             document
-                .getElementsByClassName("main")[0]
-                .classList.remove("mobile-extend");
+                .getElementsByClassName("fa-arrow-alt-circle-up")[0]
+                .classList.remove("visible");
         }
     };
 
@@ -48,7 +48,7 @@ const Navbar = ({}) => {
     return (
         <>
             <nav className="navbar-items">
-                <NavLink className="navbar-logo" to="/">
+                <NavLink className="navbar-logo" to="/aniapanato">
                     <img className="navbar-logo-img" src={logo} alt="" />
                 </NavLink>
                 <div className="menu-icon" onClick={handleClick}>

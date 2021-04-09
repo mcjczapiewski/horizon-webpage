@@ -3,6 +3,7 @@
 @import "./home";
 @import "./gallery";
 @import "./projects";
+@import "./contact";
 @import "./navbar";
 @import "./copyrightBar";
 
@@ -22,17 +23,13 @@ body {
 }
 
 .main {
-    position        : fixed;
-    right           : 0;
-    bottom          : 0;
-    top             : 0;
-    left            : 0;
-    margin-top      : 100px;
-    margin-bottom   : 50px;
-    // margin-left  : 340px;
-    // margin-right : 340px;
-    overflow-y      : auto;
-    transition      : margin-top 0.5s;
+    position     : fixed;
+    right        : 0;
+    bottom       : 0;
+    top          : 0;
+    left         : 0;
+    margin-bottom: 50px;
+    overflow-y   : auto;
 
     /* Hide scrollbar for Chrome, Safari and Opera */
     &::-webkit-scrollbar {
@@ -43,11 +40,14 @@ body {
     -ms-overflow-style: none;
     /* Firefox */
     scrollbar-width   : none;
+}
 
-    @media screen and (max-device-width: 800px) {
-        &.mobile-extend {
-            margin-top: 0 !important;
-        }
+.inner-main {
+    position: relative;
+    top     : 100px;
+
+    @media screen and (max-width: 800px) {
+        top: 80px;
     }
 }
 

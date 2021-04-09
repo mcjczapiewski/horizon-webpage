@@ -1,0 +1,31 @@
+.Contact {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    margin          : auto;
+    margin-top      : 50px;
+    width           : 400px;
+    text-align      : center;
+    background-color: rgba(255, 255, 255, 0.3);
+    @include rounded-shadow-border;
+
+    .blue-with-outline {
+        color: rgb(0, 172, 240);
+
+        text-shadow: -0.25px 0.25px 1px #000,
+            0.25px 0.25px 1px #000,
+            0.25px -0.25px 0 #000,
+            -0.25px -0.25px 0 #000;
+    }
+
+    .external-links {
+        img {
+            margin   : 0 0.7vh;
+            max-width: 70px;
+        }
+    }
+
+    @media screen and (max-device-width: 800px) {
+        zoom: 75%;
+    }
+}

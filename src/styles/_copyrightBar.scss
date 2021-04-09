@@ -6,14 +6,32 @@
     height  : 50px;
 
     .external-links {
-        position   : relative;
-        margin-top : 5px;
-        margin-left: 30px;
-        height     : 100%;
+        position     : relative;
+        margin-top   : 7px;
+        margin-bottom: 7px;
+        margin-left  : 30px;
+        height       : 100%;
+        width        : 100px;
 
         img {
             margin   : 0 0.7vh;
-            max-width: 35px;
+            max-width: 36px;
+        }
+    }
+
+    .fa-arrow-alt-circle-up {
+        position  : relative;
+        left      : 50%;
+        bottom    : 0;
+        font-size : 35px;
+        transform : translate(-50%, 0%);
+        color     : rgb(0, 172, 240);
+        cursor    : pointer;
+        z-index   : 2;
+        transition: bottom 0.5s ease;
+
+        &.visible {
+            bottom: 55px;
         }
     }
 

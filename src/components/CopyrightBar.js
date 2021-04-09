@@ -1,26 +1,22 @@
 import React from "react";
-import insta from "../assets/images/inst.png";
-import face from "../assets/images/face.png";
+import { ExternalLinks } from "./ExternalLinks";
 
-const CopyrightBar = () => {
+const CopyrightBar = ({ scrollToTop }) => {
+    const executeScroll = () => {
+        scrollToTop.current.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div className="copyright-bar">
-            <div className="external-links">
-                <a
-                    href="https://facebook.com/horizon17vt/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img src={face} alt="" />
-                </a>
-                <a
-                    href="https://www.instagram.com/horizon17vt/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <img src={insta} alt="" />
-                </a>
-            </div>
+            {ExternalLinks}
+            <i
+                className="far fa-arrow-alt-circle-up"
+                onClick={executeScroll}
+            ></i>
             <div className="copyright">© Horizon17 Virtual Tours 2021</div>;
         </div>
     );

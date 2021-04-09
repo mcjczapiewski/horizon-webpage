@@ -39,12 +39,12 @@ function Gallery() {
                 </span>
             </div>
             <br />
-            <p className="font-with-dark-bg">
+            <p className="font-with-dark-bg showroom-on-wish">
                 Na życzenie wysyłamy na maila przykład
                 <br />
                 spaceru wirtualnego mieszkania.
                 <br />
-                Zapraszamy do kontaktu :-)
+                Zapraszamy do kontaktu :-&#41;
             </p>
         </div>
     );

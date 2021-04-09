@@ -1,4 +1,10 @@
 .navbar-items {
+    .far {
+        position: fixed;
+        top     : 500px;
+        right   : 200px;
+    }
+
     // Positioning
     position       : fixed;
     z-index        : 2;
@@ -12,8 +18,8 @@
 
     transition: top 0.5s;
 
-    &.hidden-popup {
-        top: -1000px;
+    &.animate {
+        top: -100px;
     }
 
 }
@@ -84,9 +90,6 @@ ul li:last-of-type {
 }
 
 @media screen and (max-width: 800px) {
-    .main {
-        margin-top: 75px !important;
-    }
 
     @media screen and (max-device-width: 800px) {
 
