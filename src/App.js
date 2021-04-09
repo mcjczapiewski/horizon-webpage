@@ -1,14 +1,16 @@
+import Navbar from "./components/Navbar/Navbar";
 import Routes from "./routes/Routes";
-import "./index.css";
+import CopyrightBar from "./components/CopyrightBar";
+import "./styles/style.css";
 
 const App = () => {
     return (
         <>
-            {/* <Navbar/> */}
+            <Navbar />
             <div className="main">
                 <Routes />
             </div>
-            {/* <Footer /> */}
+            <CopyrightBar />
         </>
     );
 };

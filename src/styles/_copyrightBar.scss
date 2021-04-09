@@ -1,0 +1,31 @@
+.copyright-bar {
+    position: fixed;
+    bottom  : 0;
+    left    : 0;
+    right   : 0;
+    height  : 50px;
+
+    .external-links {
+        position   : relative;
+        margin-top : 5px;
+        margin-left: 30px;
+        height     : 100%;
+
+        img {
+            margin   : 0 0.7vh;
+            max-width: 35px;
+        }
+    }
+
+    .copyright {
+        position : absolute;
+        bottom   : 2vh;
+        right    : 2vw;
+        font-size: 1.5vh;
+        color    : white;
+
+        @media screen and (max-device-width :1024px) {
+            font-size: 1vh;
+        }
+    }
+}
