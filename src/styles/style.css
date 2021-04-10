@@ -239,13 +239,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 10px;
 }
 
 .Gallery .showrooms .google-span .google-text .maps-icon {
   max-width: 50px;
   max-height: 50px;
-  margin-left: 15px;
+  margin-left: 8px;
 }
 
 .Gallery .showrooms .google-span #google-iframe {
@@ -295,8 +298,21 @@
 }
 
 .Projects {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
-  margin-top: 20px;
 }
 
 .Projects h2 {
@@ -309,7 +325,8 @@
 }
 
 .Projects #google-we-were-here {
-  height: calc(100vh - 300px);
+  height: 100%;
+  margin-bottom: 15px;
   width: 70vw;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -652,7 +669,7 @@ body {
   background-size: cover;
 }
 
-.main {
+.main, .Projects {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -667,7 +684,7 @@ body {
   scrollbar-width: none;
 }
 
-.main::-webkit-scrollbar {
+.main::-webkit-scrollbar, .Projects::-webkit-scrollbar {
   display: none;
 }
 

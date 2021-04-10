@@ -38,12 +38,13 @@
                 display        : flex;
                 flex-direction : row;
                 justify-content: center;
+                align-items    : center;
                 margin-top     : 10px;
 
                 .maps-icon {
                     max-width  : 50px;
                     max-height : 50px;
-                    margin-left: 15px;
+                    margin-left: 8px;
                 }
             }
 
