@@ -4,6 +4,7 @@
 @import "./gallery";
 @import "./projects";
 @import "./contact";
+@import "./about";
 @import "./navbar";
 @import "./copyrightBar";
 
@@ -20,6 +21,10 @@ body {
     font-family    : 'Roboto', sans-serif;
     background     : url("../assets/images/bg.jpg") center no-repeat;
     background-size: cover;
+}
+
+h2 {
+    color: white;
 }
 
 .main {
