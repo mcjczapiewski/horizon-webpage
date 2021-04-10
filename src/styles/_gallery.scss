@@ -62,6 +62,40 @@
         font-size: 2.5vh;
     }
 
+    .panos-gallery {
+        width          : 85vw;
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: space-evenly;
+
+        .pano-links {
+            flex   : 1 1 0px;
+            padding: 5px;
+
+            .panos-container {
+                position  : relative;
+                text-align: center;
+
+                &:hover :not(.image-title) {
+                    filter: brightness(45%);
+                }
+
+                img {
+                    @include rounded-shadow-border;
+
+                }
+
+                .image-title {
+                    position : absolute;
+                    top      : 50%;
+                    left     : 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+        }
+    }
+
     @media screen and(max-width: 1200px) {
         .showrooms {
             flex-direction: column;

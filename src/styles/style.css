@@ -202,7 +202,7 @@
           box-sizing: border-box;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .Gallery .showrooms .wpg-span #wpg-museum:hover {
@@ -254,7 +254,7 @@
 .Gallery .showrooms .google-span #google-iframe {
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .Gallery .icon-horizon {
@@ -263,6 +263,49 @@
 
 .Gallery .showroom-on-wish {
   font-size: 2.5vh;
+}
+
+.Gallery .panos-gallery {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Gallery .panos-gallery .pano-links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  padding: 5px;
+}
+
+.Gallery .panos-gallery .pano-links .panos-container {
+  position: relative;
+  text-align: center;
+}
+
+.Gallery .panos-gallery .pano-links .panos-container:hover :not(.image-title) {
+  -webkit-filter: brightness(45%);
+          filter: brightness(45%);
+}
+
+.Gallery .panos-gallery .pano-links .panos-container img {
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.Gallery .panos-gallery .pano-links .panos-container .image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 1200px) {
@@ -330,7 +373,7 @@
   width: 70vw;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 800px) {
@@ -360,7 +403,7 @@
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .Contact .blue-with-outline {
@@ -465,7 +508,8 @@ ul li:last-of-type {
   border-right: none;
 }
 
-.nav-links {
+.nav-links,
+.image-title {
   display: inline-block;
   width: 100%;
   padding: 5px 0px;

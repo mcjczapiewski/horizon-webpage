@@ -1,5 +1,7 @@
+import React from "react";
 import wpg from "../assets/images/wpg.jpg";
 import mapsIcon from "../assets/images/maps-icon.png";
+import GalleryItems from "../assets/panos/GalleryItems.json";
 
 function Gallery() {
     return (
@@ -46,6 +48,26 @@ function Gallery() {
                 <br />
                 Zapraszamy do kontaktu :-&#41;
             </p>
+            <div className="panos-gallery">
+                {GalleryItems.map(({ title, url, cName, imgLink }) => {
+                    const image_link = require(`../assets/panos/${imgLink}`)
+                        .default;
+                    return (
+                        <div className={cName} key={title}>
+                            <a
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <div className="panos-container">
+                                    <img src={image_link} alt="" />
+                                    <div className="image-title">{title}</div>
+                                </div>
+                            </a>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
