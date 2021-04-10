@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Białołęcki Ośrodek Sportu",
+        "url": "https://goo.gl/maps/1UNwSS3gQ3kUGg2FA",
+        "cName": "pano-links",
+        "imgLink": "bos.jpg"
+    },
+    {
+        "title": "Grywałd",
+        "url": "/projects",
+        "cName": "pano-links",
+        "imgLink": "grywald.jpg"
+    },
+    {
+        "title": "Kacwin",
+        "url": "/about",
+        "cName": "pano-links",
+        "imgLink": "kacwin.jpg"
+    },
+    {
+        "title": "Zabytkowy komin huty szkła",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "komin.jpg"
+    },
+    {
+        "title": "Lidl",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "lidl.jpg"
+    },
+    {
+        "title": "Jezioro Mausz",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "mausz.jpg"
+    },
+    {
+        "title": "Osiedle Morelowa",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "morelowa.jpg"
+    },
+    {
+        "title": "Osiedle Nowy Park",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "nowyPark.jpg"
+    },
+    {
+        "title": "Parchowo",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "parchowo.jpg"
+    },
+    {
+        "title": "Nowy Podleś",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "podles.jpg"
+    },
+    {
+        "title": "Linie wysokiego napięcia",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "polczno.jpg"
+    },
+    {
+        "title": "Kanał Żerański",
+        "url": "/contact",
+        "cName": "pano-links",
+        "imgLink": "zeran.jpg"
+    }
+]
