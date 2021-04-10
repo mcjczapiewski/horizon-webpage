@@ -41,7 +41,7 @@
 
     .animated-title {
         color   : #222;
-        height  : 30vmin;
+        height  : 30vh;
         left    : 15%;
         top     : 25vh;
         position: absolute;
@@ -99,8 +99,9 @@
         transition: left 0.85s;
 
         @media screen and (max-device-width: 800px) {
-            left  : 5%;
-            height: 40vmin;
+            left     : 5%;
+            top      : 20vh;
+            // height: 20vh;
 
             >div {
                 div {
