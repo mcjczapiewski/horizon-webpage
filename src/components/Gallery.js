@@ -18,7 +18,9 @@ function Gallery() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img id="wpg-museum" src={wpg} alt="" />
+                        <div className="vignette">
+                            <img id="wpg-museum" src={wpg} alt="" />
+                        </div>
                     </a>
                 </span>
                 <span className="szalas-span">
@@ -58,7 +60,9 @@ function Gallery() {
             <div className={cName} key={title}>
                 <a href={url} target="_blank" rel="noopener noreferrer">
                     <div className="panos-container">
-                        <img src={image_link} alt="" />
+                        <div className="vignette">
+                            <img src={image_link} alt="" />
+                        </div>
                         <div className="image-title">{title}</div>
                     </div>
                 </a>
