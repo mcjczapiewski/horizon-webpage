@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
     const onScroll = (e) => {
-        if (e.target.scrollTop > 80) {
+        if (e.target.scrollTop > 40) {
             document
                 .getElementsByClassName("navbar-items")[0]
                 .classList.add("animate");

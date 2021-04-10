@@ -14,21 +14,19 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="main">
-            <div className="Home">
-                <a href="/">
-                    <img className="home-logo" src={logo} alt="" />
-                </a>
-                <div className="animated-title">
-                    <div className="text-top">
-                        <div>
-                            <span>Spacery wirtualne</span>
-                            <span>Panoramy 360°</span>
-                        </div>
+        <div className="Home">
+            <a href="/">
+                <img className="home-logo" src={logo} alt="" />
+            </a>
+            <div className="animated-title">
+                <div className="text-top">
+                    <div>
+                        <span>Spacery wirtualne</span>
+                        <span>Panoramy 360°</span>
                     </div>
-                    <div className="text-bottom">
-                        <div>Google Street View</div>
-                    </div>
+                </div>
+                <div className="text-bottom">
+                    <div>Google Street View</div>
                 </div>
             </div>
         </div>
