@@ -26,7 +26,7 @@ const Navbar = () => {
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.add("visible");
             setClickedMenuBtn(false);
-        } else {
+        } else if (e.target.scrollTop < 40) {
             document
                 .getElementsByClassName("navbar-items")[0]
                 .classList.remove("animate");

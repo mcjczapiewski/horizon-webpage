@@ -3,11 +3,7 @@ import { ExternalLinks } from "./ExternalLinks";
 
 const CopyrightBar = ({ scrollToTop }) => {
     const executeScroll = () => {
-        scrollToTop.current.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-        });
+        scrollToTop.current.scrollTo(0, 0);
     };
 
     return (
