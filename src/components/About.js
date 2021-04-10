@@ -25,10 +25,10 @@ const About = () => {
                     </span>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!4v1617820045342!6m8!1m7!1sCAoSLEFGMVFpcE0xSXZpbTFGak1YdFBsUWZOWFE3c2lWdWFEcWwtVlhLNVJ6eGZa!2m2!1d52.2678734!2d21.0618451!3f331.8381529629467!4f19.556747678851536!5f0.9028122286144149"
-                        width="500"
+                        width="600"
                         height="500"
                         style={{ border: "0" }}
-                        allowfullscreen=""
+                        allowFullScreen=""
                         loading="lazy"
                         title="GoogleMaps"
                         id="google-iframe"
