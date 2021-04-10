@@ -338,6 +338,12 @@
   .Gallery .showrooms {
     width: 75vw;
   }
+  .Gallery .panos-gallery {
+    width: 70vw;
+  }
+  .Gallery .panos-gallery img {
+    max-width: 70vw;
+  }
 }
 
 .Projects {

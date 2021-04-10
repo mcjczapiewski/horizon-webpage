@@ -130,5 +130,13 @@
         .showrooms {
             width: 75vw;
         }
+
+        .panos-gallery {
+            width: 70vw;
+
+            img {
+                max-width: 70vw;
+            }
+        }
     }
 }
