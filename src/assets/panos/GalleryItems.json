@@ -1,74 +1,86 @@
 [
     {
+        "title": "Osiedle Nowy Park",
+        "url": "https://goo.gl/maps/7ZXe2ZgVFpurXVdi6",
+        "cName": "pano-links",
+        "imgLink": "nowyPark.jpg",
+        "type": "VT"
+    },
+    {
         "title": "Białołęcki Ośrodek Sportu",
         "url": "https://goo.gl/maps/1UNwSS3gQ3kUGg2FA",
         "cName": "pano-links",
-        "imgLink": "bos.jpg"
+        "imgLink": "bos.jpg",
+        "type": "360P"
     },
     {
         "title": "Grywałd",
         "url": "https://goo.gl/maps/Z4c5tQLdX9N1mWp56",
         "cName": "pano-links",
-        "imgLink": "grywald.jpg"
+        "imgLink": "grywald.jpg",
+        "type": "360P"
     },
     {
         "title": "Kacwin",
         "url": "https://goo.gl/maps/dW6athSxoDFTMh4c9",
         "cName": "pano-links",
-        "imgLink": "kacwin.jpg"
+        "imgLink": "kacwin.jpg",
+        "type": "360P"
     },
     {
         "title": "Zabytkowy komin huty szkła",
         "url": "https://goo.gl/maps/pyuwjH8C54WUe9r19",
         "cName": "pano-links",
-        "imgLink": "komin.jpg"
+        "imgLink": "komin.jpg",
+        "type": "VT"
     },
     {
         "title": "Lidl",
         "url": "https://goo.gl/maps/th5HdNyXYgzabVvQ9",
         "cName": "pano-links",
-        "imgLink": "lidl.jpg"
+        "imgLink": "lidl.jpg",
+        "type": "VT"
     },
     {
         "title": "Jezioro Mausz",
         "url": "https://goo.gl/maps/md56kA6Rhm1VywZV6",
         "cName": "pano-links",
-        "imgLink": "mausz.jpg"
+        "imgLink": "mausz.jpg",
+        "type": "360P"
     },
     {
         "title": "Osiedle Morelowa",
         "url": "https://goo.gl/maps/agWMuVFAeJiE7A5i9",
         "cName": "pano-links",
-        "imgLink": "morelowa.jpg"
-    },
-    {
-        "title": "Osiedle Nowy Park",
-        "url": "https://goo.gl/maps/7ZXe2ZgVFpurXVdi6",
-        "cName": "pano-links",
-        "imgLink": "nowyPark.jpg"
+        "imgLink": "morelowa.jpg",
+        "type": "360P"
     },
     {
         "title": "Parchowo",
         "url": "https://goo.gl/maps/CuPwWeMU5pMjLfE48",
         "cName": "pano-links",
-        "imgLink": "parchowo.jpg"
+        "imgLink": "parchowo.jpg",
+        "type": "360P"
     },
     {
         "title": "Nowy Podleś",
         "url": "https://goo.gl/maps/DkhQ67wuugFMDT5H6",
         "cName": "pano-links",
-        "imgLink": "podles.jpg"
+        "imgLink": "podles.jpg",
+        "type": "360P"
     },
     {
         "title": "Linie wysokiego napięcia",
         "url": "https://goo.gl/maps/2XoUnXZiWMKWcGPP6",
         "cName": "pano-links",
-        "imgLink": "polczno.jpg"
+        "imgLink": "polczno.jpg",
+        "type": "360P"
     },
     {
         "title": "Kanał Żerański",
         "url": "https://goo.gl/maps/Mq3EiRrCgLnikT9x6",
         "cName": "pano-links",
-        "imgLink": "zeran.jpg"
+        "imgLink": "zeran.jpg",
+        "type": "360P"
     }
 ]

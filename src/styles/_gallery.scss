@@ -12,44 +12,23 @@
         justify-content: space-evenly;
         width          : 85vw;
 
-        .wpg-span {
-            #wpg-museum {
-                width          : 500px;
-                height         : 500px;
+        .wpg-span,
+        .szalas-span {
+
+            #wpg-museum,
+            #szalas-image {
+                width          : 300px;
+                height         : 300px;
                 object-fit     : cover;
                 object-position: center;
                 box-sizing     : border-box;
                 @include rounded-shadow-border;
+            }
 
+            #wpg-museum {
                 &:hover {
                     filter: opacity(80%);
                 }
-            }
-        }
-
-        .google-span {
-            align-self     : normal;
-            display        : flex;
-            flex-direction : column;
-            justify-content: space-between;
-            align-items    : center;
-
-            .google-text {
-                display        : flex;
-                flex-direction : row;
-                justify-content: center;
-                align-items    : center;
-                margin-top     : 10px;
-
-                .maps-icon {
-                    max-width  : 50px;
-                    max-height : 50px;
-                    margin-left: 8px;
-                }
-            }
-
-            #google-iframe {
-                @include rounded-shadow-border;
             }
         }
     }
@@ -58,18 +37,14 @@
         width: 35px;
     }
 
-    .showroom-on-wish {
-        font-size: 2.5vh;
-    }
-
-    .panos-gallery {
+    .panos-gallery,
+    .tours-gallery {
         width          : 85vw;
         display        : flex;
         flex-wrap      : wrap;
         justify-content: space-evenly;
 
         .pano-links {
-            flex   : 1 1 0px;
             padding: 5px;
 
             .panos-container {
@@ -99,28 +74,19 @@
     @media screen and(max-width: 1200px) {
         .showrooms {
             flex-direction: column;
-
-            .google-span {
-                display: block;
-            }
         }
     }
 
     @media screen and(max-width: 800px) {
         .showrooms {
-            .wpg-span {
-                #wpg-museum {
-                    width : 100%;
-                    height: 40%;
-                }
-            }
 
-            .google-span {
-                width: 100%;
+            .wpg-span,
+            .szalas-span {
 
-                #google-iframe {
-                    width : 100%;
-                    height: 50vh;
+                #wpg-museum,
+                #szalas-image {
+                    max-width: 100%;
+                    height   : auto;
                 }
             }
         }
