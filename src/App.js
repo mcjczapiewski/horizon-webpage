@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Routes from "./routes/Routes";
 import CopyrightBar from "./components/CopyrightBar";
@@ -6,13 +6,20 @@ import "./styles/style.css";
 
 const App = () => {
     const scrollToTop = useRef(null);
+    const [vtScroll, setVtScroll] = useState(false);
+    const [panoScroll, setPanoScroll] = useState(false);
 
     return (
         <>
-            <Navbar />
+            <Navbar setPanoScroll={setPanoScroll} setVtScroll={setVtScroll} />
             <div className="main" ref={scrollToTop}>
                 <div className="inner-main">
-                    <Routes />
+                    <Routes
+                        panoScroll={panoScroll}
+                        setPanoScroll={setPanoScroll}
+                        vtScroll={vtScroll}
+                        setVtScroll={setVtScroll}
+                    />
                 </div>
             </div>
             <CopyrightBar scrollToTop={scrollToTop} />

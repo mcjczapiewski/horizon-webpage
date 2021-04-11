@@ -6,13 +6,25 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import About from "../components/About";
 
-const Routes = () => (
+const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
     <Switch>
         <Route exact path="/aniapanato" component={Home} />
-        <Route exact path="/gallery" component={Gallery} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/about" component={About} />
+        <Route
+            exact
+            path="/gallery"
+            render={(props) => (
+                <Gallery
+                    panoScroll={panoScroll}
+                    setPanoScroll={setPanoScroll}
+                    vtScroll={vtScroll}
+                    setVtScroll={setVtScroll}
+                    {...props}
+                />
+            )}
+        />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
     </Switch>
 );
 

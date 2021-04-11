@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import wpg from "../assets/images/wpg.jpg";
 import szalas from "../assets/images/szalas.jpg";
 import GalleryItems from "../assets/panos/GalleryItems.json";
 
-function Gallery() {
+const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
+    const panoRef = useRef(null);
+    const vtRef = useRef(null);
+
+    useEffect(() => {
+        if (panoScroll) {
+            setTimeout(() => {
+                panoRef.current.scrollIntoView();
+            }, 100);
+            setPanoScroll(false);
+        } else if (vtScroll) {
+            setTimeout(() => {
+                vtRef.current.scrollIntoView();
+            }, 100);
+            setVtScroll(false);
+        }
+    });
+
     return (
         <div className="Gallery">
             <div className="showrooms">
@@ -35,7 +52,7 @@ function Gallery() {
                 </span>
             </div>
             <br />
-            <h2>Wycieczki wirtualne</h2>
+            <h2 ref={vtRef}>Wycieczki wirtualne</h2>
             <div className="tours-gallery">
                 {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
                     if (type === "VT") {
@@ -43,7 +60,7 @@ function Gallery() {
                     }
                 })}
             </div>
-            <h2>Panoramy 360°</h2>
+            <h2 ref={panoRef}>Panoramy 360°</h2>
             <div className="panos-gallery">
                 {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
                     if (type === "360P") {
@@ -69,6 +86,6 @@ function Gallery() {
             </div>
         );
     }
-}
+};
 
 export default Gallery;
