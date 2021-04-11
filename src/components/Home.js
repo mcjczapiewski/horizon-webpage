@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <div className="Home">
-            <a href="/">
+            <a href="/aniapanato">
                 <img className="home-logo" src={logo} alt="" />
             </a>
             <div className="animated-title">

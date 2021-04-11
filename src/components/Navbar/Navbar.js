@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import logo from "../../logo.svg";
 
-const Navbar = () => {
+const Navbar = ({ setPanoScroll, setVtScroll }) => {
     const [clickedMenuBtn, setClickedMenuBtn] = useState(false);
 
     function handleClick() {
@@ -74,6 +74,24 @@ const Navbar = () => {
                                     {title}
                                 </NavLink>
                             </div>
+                            {title === "Galeria" && (
+                                <div className="dropdown-menu">
+                                    <Link
+                                        exact
+                                        to="/gallery"
+                                        onClick={() => setVtScroll(true)}
+                                    >
+                                        Wycieczki
+                                    </Link>
+                                    <Link
+                                        exact
+                                        to="/gallery"
+                                        onClick={() => setPanoScroll(true)}
+                                    >
+                                        Panoramy
+                                    </Link>
+                                </div>
+                            )}
                         </li>
                     ))}
                 </ul>

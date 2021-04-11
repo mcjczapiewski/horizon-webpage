@@ -57,10 +57,50 @@
 
     list-style: none;
 
+
     li {
         width     : (100% / 4);
         text-align: center;
+
+        .dropdown-menu {
+            display         : none;
+            position        : absolute;
+            width           : 149.25px;
+            background-color: rgba(0, 172, 240, 0.8);
+            @include rounded-shadow-border;
+            z-index: 1;
+
+            a {
+                display      : inline-block;
+                width        : 70%;
+                padding      : 5px 0px;
+                border-bottom: 1px solid white;
+
+                font-size      : 1.3rem;
+                text-decoration: none;
+                color          : white;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+
+            a:hover {
+                color: black;
+            }
+        }
+
+        &:hover {
+            .nav-links {
+                color: black;
+            }
+
+            .dropdown-menu {
+                display: block;
+            }
+        }
     }
+
 }
 
 // white vertical lines
