@@ -1,5 +1,5 @@
 import React from "react";
-import favicon from "../assets/images/just_blades.png";
+import favicon from "../assets/images/just_blades.svg";
 
 const Projects = () => {
     return (

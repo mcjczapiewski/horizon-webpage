@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import logo from "../../logo.svg";
+import chevronRight from "../../assets/images/chevron-right.svg";
 
 const Navbar = ({ setPanoScroll, setVtScroll }) => {
     const [clickedMenuBtn, setClickedMenuBtn] = useState(false);
@@ -9,7 +10,12 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
     function handleClick() {
         if (window.innerWidth < 800) {
             setClickedMenuBtn(!clickedMenuBtn);
+            console.log(1);
+            document
+                .getElementsByClassName("close-popup-area")[0]
+                .classList.toggle("active");
             if (document.getElementsByClassName("animated-title")[0]) {
+                console.log(2);
                 document
                     .getElementsByClassName("animated-title")[0]
                     .classList.toggle("hidden");
@@ -47,7 +53,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
             <nav className="navbar-items">
                 <NavLink
                     className="navbar-logo"
-                    to="/aniapanato"
+                    to="/"
                     onClick={() => {
                         setClickedMenuBtn(false);
                     }}
@@ -62,35 +68,59 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                     ></i>
                 </div>
                 <ul className={clickedMenuBtn ? "nav-menu active" : "nav-menu"}>
+                    <div
+                        className={`close-popup-area ${
+                            clickedMenuBtn ? "active" : ""
+                        }`}
+                        onClick={handleClick}
+                    ></div>
                     {MenuItems.map(({ title, url, cName }) => (
-                        <li onClick={handleClick} key={title}>
+                        <li key={title}>
                             <div>
                                 <NavLink
                                     exact
                                     activeClassName="active"
                                     className={cName}
                                     to={url}
+                                    onClick={handleClick}
                                 >
                                     {title}
                                 </NavLink>
+                                <img
+                                    className={`chevron-right ${
+                                        clickedMenuBtn && title === "Galeria"
+                                            ? "active"
+                                            : ""
+                                    }`}
+                                    src={chevronRight}
+                                    onCLick={handleClick}
+                                />
                             </div>
                             {title === "Galeria" && (
-                                <div className="dropdown-menu">
-                                    <Link
-                                        exact
-                                        to="/gallery"
-                                        onClick={() => setVtScroll(true)}
+                                <>
+                                    <div
+                                        className={
+                                            clickedMenuBtn
+                                                ? "dropdown-menu active"
+                                                : "dropdown-menu"
+                                        }
                                     >
-                                        Wycieczki
-                                    </Link>
-                                    <Link
-                                        exact
-                                        to="/gallery"
-                                        onClick={() => setPanoScroll(true)}
-                                    >
-                                        Panoramy
-                                    </Link>
-                                </div>
+                                        <Link
+                                            exact
+                                            to="/gallery"
+                                            onClick={() => setVtScroll(true)}
+                                        >
+                                            Wycieczki
+                                        </Link>
+                                        <Link
+                                            exact
+                                            to="/gallery"
+                                            onClick={() => setPanoScroll(true)}
+                                        >
+                                            Panoramy
+                                        </Link>
+                                    </div>
+                                </>
                             )}
                         </li>
                     ))}
