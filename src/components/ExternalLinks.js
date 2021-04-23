@@ -1,6 +1,6 @@
 import React from "react";
-import insta from "../assets/images/inst.png";
-import face from "../assets/images/face.png";
+import insta from "../assets/images/inst.svg";
+import face from "../assets/images/face.svg";
 
 export const ExternalLinks = (
     <div className="external-links">

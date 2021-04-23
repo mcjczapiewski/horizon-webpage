@@ -8,7 +8,7 @@ import About from "../components/About";
 
 const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
     <Switch>
-        <Route exact path="/aniapanato" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route
             exact
             path="/gallery"

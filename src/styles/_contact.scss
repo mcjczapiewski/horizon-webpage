@@ -6,22 +6,17 @@
     margin-top      : 50px;
     width           : 400px;
     text-align      : center;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.665);
     @include rounded-shadow-border;
 
-    .blue-with-outline {
-        color: rgb(0, 172, 240);
-
-        text-shadow: -0.25px 0.25px 1px #000,
-            0.25px 0.25px 1px #000,
-            0.25px -0.25px 0 #000,
-            -0.25px -0.25px 0 #000;
+    a {
+        color: rgba(0, 172, 240, 0.7);
     }
 
     .external-links {
         img {
             margin   : 0 0.7vh;
-            max-width: 70px;
+            max-width: 50px;
         }
     }
 

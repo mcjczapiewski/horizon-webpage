@@ -5,8 +5,11 @@
     justify-content: space-around;
     align-items    : center;
     flex-direction : row;
-    max-width      : 85vw;
+    width          : clamp(200px, 700px, 85vw);
     margin         : auto;
+
+    background-color: rgba(0, 0, 0, 0.665);
+    @include rounded-shadow-border;
 
     @media screen and(max-width: 1200px) {
         flex-direction: column;
@@ -14,6 +17,10 @@
     }
 
     .column-one {
+        padding         : 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        @include rounded-shadow-border;
+
         .about-text {
             max-width : 800px;
             text-align: justify;

@@ -1,10 +1,10 @@
 import React from "react";
-import mapsIcon from "../assets/images/maps-icon.png";
+import mapsIcon from "../assets/images/maps-icon.svg";
 
 const About = () => {
     return (
         <div className="About">
-            <div className="column-one">
+            {/* <div className="column-one">
                 <div className="about-text">
                     Zaczynaliśmy od wykonywania ujęć z drona, a teraz schodzimy
                     na ziemię i udostępniamy zainteresowanym możliwość zdalnego
@@ -16,7 +16,7 @@ const About = () => {
                     pomieszczeń, do których się wybiera, ale też ogólnej
                     przestrzeni, po której będzie się poruszał.
                 </div>
-            </div>
+            </div> */}
             <div className="column-two">
                 <span className="google-span">
                     <span className="google-text">

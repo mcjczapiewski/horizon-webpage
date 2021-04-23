@@ -11,25 +11,44 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
         if (panoScroll) {
             setTimeout(() => {
                 panoRef.current.scrollIntoView();
-            }, 100);
+            }, 200);
             setPanoScroll(false);
         } else if (vtScroll) {
             setTimeout(() => {
                 vtRef.current.scrollIntoView();
-            }, 100);
+            }, 200);
             setVtScroll(false);
         }
     });
 
     return (
         <div className="Gallery">
+            <br />
+            <h2 ref={vtRef}>Wycieczki wirtualne</h2>
+            <div className="tours-gallery">
+                {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
+                    if (type === "VT") {
+                        return galleryRender(imgLink, cName, title, url);
+                    }
+                    return false;
+                })}
+            </div>
+            <h2 ref={panoRef}>Panoramy 360°</h2>
+            <div className="panos-gallery">
+                {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
+                    if (type === "360P") {
+                        return galleryRender(imgLink, cName, title, url);
+                    }
+                    return false;
+                })}
+            </div>
             <div className="showrooms">
                 <span className="wpg-span">
-                    <h3>
+                    <h4>
                         Wykonaliśmy panoramy 360° do spaceru
                         <br />
                         wirtualnego po Muzeum Geodezji:
-                    </h3>
+                    </h4>
                     <a
                         href="https://www.wpg.com.pl/muzeum/"
                         target="_blank"
@@ -41,32 +60,15 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
                     </a>
                 </span>
                 <span className="szalas-span">
-                    <h3>
+                    <h4>
                         Na życzenie wysyłamy na maila przykład
                         <br />
                         spaceru wirtualnego mieszkania.
                         <br />
-                        Zapraszamy do kontaktu :-&#41;
-                    </h3>
+                        Zapraszamy do kontaktu.
+                    </h4>
                     <img id="szalas-image" src={szalas} alt="" />
                 </span>
-            </div>
-            <br />
-            <h2 ref={vtRef}>Wycieczki wirtualne</h2>
-            <div className="tours-gallery">
-                {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
-                    if (type === "VT") {
-                        return galleryRender(imgLink, cName, title, url);
-                    }
-                })}
-            </div>
-            <h2 ref={panoRef}>Panoramy 360°</h2>
-            <div className="panos-gallery">
-                {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
-                    if (type === "360P") {
-                        return galleryRender(imgLink, cName, title, url);
-                    }
-                })}
             </div>
         </div>
     );

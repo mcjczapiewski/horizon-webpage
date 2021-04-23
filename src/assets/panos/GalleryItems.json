@@ -1,5 +1,12 @@
 [
     {
+        "title": "Most Kolejowy w Bytowie",
+        "url": "/vt/mostkolejowybytow",
+        "cName": "pano-links",
+        "imgLink": "mostBytow.jpg",
+        "type": "VT"
+    },
+    {
         "title": "Osiedle Nowy Park",
         "url": "https://goo.gl/maps/7ZXe2ZgVFpurXVdi6",
         "cName": "pano-links",
@@ -32,13 +39,6 @@
         "url": "https://goo.gl/maps/pyuwjH8C54WUe9r19",
         "cName": "pano-links",
         "imgLink": "komin.jpg",
-        "type": "VT"
-    },
-    {
-        "title": "Lidl",
-        "url": "https://goo.gl/maps/th5HdNyXYgzabVvQ9",
-        "cName": "pano-links",
-        "imgLink": "lidl.jpg",
         "type": "VT"
     },
     {
