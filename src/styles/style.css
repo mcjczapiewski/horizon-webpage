@@ -378,6 +378,7 @@
 .About {
   position: relative;
   top: 20px;
+  left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -885,12 +886,19 @@ body {
 .inner-main {
   position: relative;
   top: 100px;
+  left: 0px;
+  -webkit-transition: left 1s ease;
+  transition: left 1s ease;
 }
 
 @media screen and (max-width: 800px) {
   .inner-main {
     top: 80px;
   }
+}
+
+.inner-main.hidden {
+  left: -1000px;
 }
 
 .vignette {
