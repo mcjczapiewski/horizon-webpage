@@ -10,14 +10,17 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
     function handleClick() {
         if (window.innerWidth < 800) {
             setClickedMenuBtn(!clickedMenuBtn);
-            console.log(1);
             document
                 .getElementsByClassName("close-popup-area")[0]
                 .classList.toggle("active");
             if (document.getElementsByClassName("animated-title")[0]) {
-                console.log(2);
                 document
                     .getElementsByClassName("animated-title")[0]
+                    .classList.toggle("hidden");
+            }
+            if (document.getElementsByClassName("inner-main")[0]) {
+                document
+                    .getElementsByClassName("inner-main")[0]
                     .classList.toggle("hidden");
             }
         }
