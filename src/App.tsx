@@ -5,7 +5,7 @@ import CopyrightBar from "./components/CopyrightBar";
 import "./styles/style.css";
 
 const App = () => {
-    const scrollToTop = useRef(null);
+    const scrollToTop = useRef<HTMLDivElement>(null);
     const [vtScroll, setVtScroll] = useState(false);
     const [panoScroll, setPanoScroll] = useState(false);
 

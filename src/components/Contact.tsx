@@ -1,7 +1,7 @@
 import React from "react";
 import { ExternalLinks } from "./ExternalLinks";
 
-const Contact = () => {
+const Contact: React.FC = () => {
     return (
         <div className="Contact">
             <h2 className="email-address">

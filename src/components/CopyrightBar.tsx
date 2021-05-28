@@ -1,9 +1,15 @@
-import React from "react";
+import React, {RefObject} from "react";
 import { ExternalLinks } from "./ExternalLinks";
 
-const CopyrightBar = ({ scrollToTop }) => {
+interface IProps {
+  scrollToTop: RefObject<HTMLDivElement>;
+}
+
+const CopyrightBar = ({ scrollToTop }: IProps) => {
     const executeScroll = () => {
+      if (scrollToTop.current) {
         scrollToTop.current.scrollTo(0, 0);
+      }
     };
 
     return (

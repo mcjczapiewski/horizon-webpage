@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "../components/Home";
 import Gallery from "../components/Gallery";
 import Projects from "../components/Projects";
-import Contact from "../components/Contact";
+import Contact from "../components/Contact.tsx";
 import About from "../components/About";
 
 const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (

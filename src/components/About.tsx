@@ -28,11 +28,11 @@ const About = () => {
                         width="600"
                         height="500"
                         style={{ border: "0" }}
-                        allowFullScreen=""
+                        allowFullScreen={false}
                         loading="lazy"
                         title="GoogleMaps"
                         id="google-iframe"
-                        rel="noopener noreferrer"
+                        data-rel="noopener noreferrer"
                     ></iframe>
                 </span>
             </div>

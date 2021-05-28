@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Dispatch, SetStateAction } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import logo from "../../logo.svg";
 import chevronRight from "../../assets/images/chevron-right.svg";
 
-const Navbar = ({ setPanoScroll, setVtScroll }) => {
+interface IProps {
+  setPanoScroll: Dispatch<SetStateAction<boolean>>;
+  setVtScroll: Dispatch<SetStateAction<boolean>>;
+}
+
+const Navbar = ({ setPanoScroll, setVtScroll } : IProps) => {
     const [clickedMenuBtn, setClickedMenuBtn] = useState(false);
 
     function handleClick() {
@@ -26,8 +31,10 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
         }
     }
 
-    const onScroll = (e) => {
-        if (e.target.scrollTop > 40) {
+    const onScroll: EventListener = (e: Event) => {
+      if (e.target){
+      var element = e.target as HTMLElement;
+        if (element.scrollTop > 40) {
             document
                 .getElementsByClassName("navbar-items")[0]
                 .classList.add("animate");
@@ -35,7 +42,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.add("visible");
             setClickedMenuBtn(false);
-        } else if (e.target.scrollTop < 40) {
+        } else if (element.scrollTop < 40) {
             document
                 .getElementsByClassName("navbar-items")[0]
                 .classList.remove("animate");
@@ -43,6 +50,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.remove("visible");
         }
+      }
     };
 
     useEffect(() => {
@@ -96,7 +104,8 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                             : ""
                                     }`}
                                     src={chevronRight}
-                                    onCLick={handleClick}
+                                    alt=""
+                                    onClick={handleClick}
                                 />
                             </div>
                             {title === "Galeria" && (
