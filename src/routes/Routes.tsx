@@ -1,12 +1,24 @@
-import React from "react";
+import { Dispatch, SetStateAction } from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from "../components/Home";
-import Gallery from "../components/Gallery";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact.tsx";
 import About from "../components/About";
+import Contact from "../components/Contact";
+import Gallery from "../components/Gallery";
+import Home from "../components/Home";
+import Projects from "../components/Projects";
 
-const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
+interface IProps {
+    setPanoScroll: Dispatch<SetStateAction<boolean>>;
+    setVtScroll: Dispatch<SetStateAction<boolean>>;
+    panoScroll: boolean;
+    vtScroll: boolean;
+}
+
+const Routes = ({
+    panoScroll,
+    setPanoScroll,
+    vtScroll,
+    setVtScroll,
+}: IProps) => (
     <Switch>
         <Route exact path="/" component={Home} />
         <Route

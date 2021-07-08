@@ -4,39 +4,42 @@ import szalas from "../assets/images/szalas.jpg";
 import GalleryItems from "../assets/panos/GalleryItems.json";
 
 interface IProps {
-  panoScroll: boolean;
-  setPanoScroll: Dispatch<SetStateAction<boolean>>;
-  vtScroll: boolean;
-  setVtScroll: Dispatch<SetStateAction<boolean>>;
+    panoScroll: boolean;
+    setPanoScroll: Dispatch<SetStateAction<boolean>>;
+    vtScroll: boolean;
+    setVtScroll: Dispatch<SetStateAction<boolean>>;
 }
 
 interface GalleryTypes {
-  title: string;
-  url: string;
-  cName: string;
-  imgLink: string;
-  type: string;
+    title: string;
+    url: string;
+    cName: string;
+    imgLink: string;
+    type: string;
 }
 
-
-const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll } : IProps) => {
+const Gallery = ({
+    panoScroll,
+    setPanoScroll,
+    vtScroll,
+    setVtScroll,
+}: IProps) => {
     const panoRef = useRef<HTMLHeadingElement>(null);
     const vtRef = useRef<HTMLHeadingElement>(null);
 
     useEffect(() => {
         if (panoScroll) {
             setTimeout(() => {
-              if (panoRef.current) {
-
-                panoRef.current.scrollIntoView();
-              }
+                if (panoRef.current) {
+                    panoRef.current.scrollIntoView();
+                }
             }, 200);
             setPanoScroll(false);
         } else if (vtScroll) {
             setTimeout(() => {
-              if (vtRef.current) {
-                vtRef.current.scrollIntoView();
-              }
+                if (vtRef.current) {
+                    vtRef.current.scrollIntoView();
+                }
             }, 200);
             setVtScroll(false);
         }
@@ -47,21 +50,25 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll } : IProps) 
             <br />
             <h2 ref={vtRef}>Wycieczki wirtualne</h2>
             <div className="tours-gallery">
-                {GalleryItems.map(({ title, url, cName, imgLink, type }: GalleryTypes) => {
-                    if (type === "VT") {
-                        return galleryRender(imgLink, cName, title, url);
+                {GalleryItems.map(
+                    ({ title, url, cName, imgLink, type }: GalleryTypes) => {
+                        if (type === "VT") {
+                            return galleryRender(imgLink, cName, title, url);
+                        }
+                        return false;
                     }
-                    return false;
-                })}
+                )}
             </div>
             <h2 ref={panoRef}>Panoramy 360°</h2>
             <div className="panos-gallery">
-                {GalleryItems.map(({ title, url, cName, imgLink, type }: GalleryTypes) => {
-                    if (type === "360P") {
-                        return galleryRender(imgLink, cName, title, url);
+                {GalleryItems.map(
+                    ({ title, url, cName, imgLink, type }: GalleryTypes) => {
+                        if (type === "360P") {
+                            return galleryRender(imgLink, cName, title, url);
+                        }
+                        return false;
                     }
-                    return false;
-                })}
+                )}
             </div>
             <div className="showrooms">
                 <span className="wpg-span">
@@ -94,7 +101,12 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll } : IProps) 
         </div>
     );
 
-    function galleryRender(imgLink: string, cName: string, title: string, url: string) {
+    function galleryRender(
+        imgLink: string,
+        cName: string,
+        title: string,
+        url: string
+    ) {
         const image_link = require(`../assets/panos/${imgLink}`).default;
         return (
             <div className={cName} key={title}>
