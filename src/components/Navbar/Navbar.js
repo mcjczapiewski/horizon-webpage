@@ -96,7 +96,8 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                             : ""
                                     }`}
                                     src={chevronRight}
-                                    onCLick={handleClick}
+                                    onClick={handleClick}
+                                    alt=""
                                 />
                             </div>
                             {title === "Galeria" && (
