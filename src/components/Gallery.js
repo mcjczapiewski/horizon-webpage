@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import wpg from "../assets/images/wpg.jpg";
 import szalas from "../assets/images/szalas.jpg";
-import GalleryItems from "../assets/panos/GalleryItems.json";
 
 const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     const panoRef = useRef(null);
     const vtRef = useRef(null);
+    const [galleryItems, setGalleryItems] = useState([]);
 
     useEffect(() => {
         if (panoScroll) {
@@ -21,13 +21,50 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
         }
     });
 
+    useEffect(() => {
+        let isMounted = true;
+        if (isMounted) {
+            getGalleryItems();
+            console.log(galleryItems);
+        }
+        return () => {
+            isMounted = false;
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    async function getGalleryItems() {
+        const response = await fetch(
+            "https://horizon17.pl/vt/GalleryItems.json",
+            {
+                method: "get",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+            }
+        );
+        const jsonData = await response.json();
+        setGalleryItems(jsonData);
+        console.log(galleryItems);
+    }
+
     return (
         <div className="Gallery">
             <br />
             <h2 ref={vtRef}>Wycieczki wirtualne</h2>
             <div className="tours-gallery">
-                {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
+                {galleryItems.map(({ title, url, cName, imgLink, type }) => {
                     if (type === "VT") {
+                        return galleryRender(imgLink, cName, title, url);
+                    }
+                    return false;
+                })}
+            </div>
+            <h2>Wycieczki wirtualne firm</h2>
+            <div className="tours-gallery">
+                {galleryItems.map(({ title, url, cName, imgLink, type }) => {
+                    if (type === "cVT") {
                         return galleryRender(imgLink, cName, title, url);
                     }
                     return false;
@@ -35,7 +72,7 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
             </div>
             <h2 ref={panoRef}>Panoramy 360°</h2>
             <div className="panos-gallery">
-                {GalleryItems.map(({ title, url, cName, imgLink, type }) => {
+                {galleryItems.map(({ title, url, cName, imgLink, type }) => {
                     if (type === "360P") {
                         return galleryRender(imgLink, cName, title, url);
                     }
@@ -74,7 +111,7 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     );
 
     function galleryRender(imgLink, cName, title, url) {
-        const image_link = require(`../assets/panos/${imgLink}`).default;
+        const image_link = `https://horizon17.pl/vt/galleryImages/${imgLink}`;
         return (
             <div className={cName} key={title}>
                 <a href={url} target="_blank" rel="noopener noreferrer">
