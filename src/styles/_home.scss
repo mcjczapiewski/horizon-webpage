@@ -1,11 +1,13 @@
 .Home {
+    font-weight: 300;
+
     .home-logo {
         position: fixed;
         top     : 15px;
         left    : 3%;
         height  : 150px;
 
-        @media screen and (max-width:900px) {
+        @media screen and (max-width:1000px) {
             height: 110px;
         }
 
