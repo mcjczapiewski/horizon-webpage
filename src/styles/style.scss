@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @import "./mixins";
 @import "./home";
 @import "./gallery";
@@ -7,6 +7,7 @@
 @import "./about";
 @import "./navbar";
 @import "./copyrightBar";
+@import "./whatIsIt";
 
 html,
 body {
@@ -19,6 +20,7 @@ body {
     top            : 0;
     left           : 0;
     font-family    : 'Roboto', sans-serif;
+    font-weight    : 100;
     background     : url("../assets/images/bg.jpg") center no-repeat;
     background-size: cover;
     color          : white;
@@ -35,29 +37,37 @@ body {
     top          : 0;
     left         : 0;
     margin-bottom: 50px;
+    margin-top   : 100px;
     overflow-y   : auto;
+    overflow-x   : hidden;
 
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        display: none;
+    transition: all 0.5s;
+
+    &.no-margin {
+        margin-top: 0;
     }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    // &::-webkit-scrollbar {
+    // display: initial;
+    // }
+
     /* IE and Edge */
-    -ms-overflow-style : none;
+    // -ms-overflow-style : none;
     /* Firefox */
-    scrollbar-width    : none;
+    // scrollbar-width    : none;
 }
 
 .inner-main {
     position: relative;
-    top     : 100px;
+    top     : 0px;
     left    : 0px;
 
-    @media screen and (max-width: 800px) {
-        top: 80px;
-    }
+    transition: all 0.7s;
 
-    transition: left 1s ease;
+    &.no-margin {
+        top: 100px;
+    }
 
     &.hidden {
         left: -1000px;
