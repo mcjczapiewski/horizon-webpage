@@ -5,6 +5,7 @@ import Gallery from "../components/Gallery";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import About from "../components/About";
+import WhatIsIt from "../components/WhatIsIt";
 
 const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
     <Switch>
@@ -25,6 +26,7 @@ const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
+        <Route path="/whatisit" component={WhatIsIt} />
     </Switch>
 );
 
