@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+.Home {
+  font-weight: 300;
+}
+
 .Home .home-logo {
   position: fixed;
   top: 15px;
@@ -6,7 +10,7 @@
   height: 150px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .Home .home-logo {
     height: 110px;
   }
@@ -178,44 +182,6 @@
   border-radius: 20px;
 }
 
-.Gallery .showrooms {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 85vw;
-}
-
-.Gallery .showrooms .wpg-span #wpg-museum,
-.Gallery .showrooms .wpg-span #szalas-image,
-.Gallery .showrooms .szalas-span #wpg-museum,
-.Gallery .showrooms .szalas-span #szalas-image {
-  width: 300px;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 20px;
-}
-
-.Gallery .showrooms .wpg-span .vignette:hover,
-.Gallery .showrooms .szalas-span .vignette:hover {
-  -webkit-filter: opacity(80%);
-          filter: opacity(80%);
-}
-
 .Gallery .icon-horizon {
   width: 35px;
 }
@@ -244,12 +210,6 @@
   text-align: center;
 }
 
-.Gallery .panos-gallery .pano-links .panos-container:hover :not(.image-title),
-.Gallery .tours-gallery .pano-links .panos-container:hover :not(.image-title) {
-  -webkit-filter: brightness(45%);
-          filter: brightness(45%);
-}
-
 .Gallery .panos-gallery .pano-links .panos-container img,
 .Gallery .tours-gallery .pano-links .panos-container img {
   border-radius: 20px;
@@ -258,32 +218,25 @@
 .Gallery .panos-gallery .pano-links .panos-container .image-title,
 .Gallery .tours-gallery .pano-links .panos-container .image-title {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-@media screen and (max-width: 800px) {
-  .Gallery .showrooms {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .Gallery .showrooms .wpg-span #wpg-museum,
-  .Gallery .showrooms .wpg-span #szalas-image,
-  .Gallery .showrooms .szalas-span #wpg-museum,
-  .Gallery .showrooms .szalas-span #szalas-image {
-    max-width: 100%;
-    height: auto;
-  }
+.Gallery .panos-gallery .pano-links .panos-container:hover .image-title,
+.Gallery .tours-gallery .pano-links .panos-container:hover .image-title {
+  background-color: unset;
+}
+
+.Gallery .panos-gallery .pano-links .panos-container:hover :not(.image-title),
+.Gallery .tours-gallery .pano-links .panos-container:hover :not(.image-title) {
+  -webkit-filter: brightness(45%);
+          filter: brightness(45%);
 }
 
 @media screen and (max-device-width: 800px) {
-  .Gallery .showrooms {
-    width: 75vw;
-  }
   .Gallery .panos-gallery,
   .Gallery .tours-gallery {
     width: 70vw;
@@ -353,7 +306,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 400px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.665);
@@ -375,7 +328,7 @@
   }
 }
 
-.About {
+.About, .WhatIsIt {
   position: relative;
   top: 20px;
   left: 0px;
@@ -391,14 +344,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: clamp(200px, 700px, 85vw);
+  width: 85vw;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.665);
   border-radius: 20px;
 }
 
 @media screen and (max-width: 1200px) {
-  .About {
+  .About, .WhatIsIt {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -406,19 +359,29 @@
   }
 }
 
-.About .column-one {
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
+.About .column-one, .WhatIsIt .column-one {
+  padding: 25px;
 }
 
-.About .column-one .about-text {
+.About .column-one .about-text, .WhatIsIt .column-one .about-text {
   max-width: 800px;
-  text-align: justify;
   font-size: 1.4rem;
 }
 
-.About .column-two {
+.About .column-one .about-text ul, .WhatIsIt .column-one .about-text ul {
+  padding-left: 20px;
+}
+
+.About .column-one .about-text ul li, .WhatIsIt .column-one .about-text ul li {
+  border: none;
+}
+
+.About .column-one .about-text .tell-us, .WhatIsIt .column-one .about-text .tell-us {
+  text-align: center;
+  font-weight: 300;
+}
+
+.About .column-two, .WhatIsIt .column-two {
   margin: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,7 +398,7 @@
           justify-content: space-evenly;
 }
 
-.About .column-two .google-span {
+.About .column-two .google-span, .WhatIsIt .column-two .google-span {
   -ms-flex-item-align: normal;
       align-self: normal;
   display: -webkit-box;
@@ -453,7 +416,7 @@
           align-items: center;
 }
 
-.About .column-two .google-span .google-text {
+.About .column-two .google-span .google-text, .WhatIsIt .column-two .google-span .google-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,37 +434,37 @@
   margin-top: 10px;
 }
 
-.About .column-two .google-span .google-text .maps-icon {
+.About .column-two .google-span .google-text .maps-icon, .WhatIsIt .column-two .google-span .google-text .maps-icon {
   max-width: 50px;
   max-height: 50px;
   margin-left: 8px;
 }
 
-.About .column-two .google-span #google-iframe {
+.About .column-two .google-span #google-iframe, .WhatIsIt .column-two .google-span #google-iframe {
   border-radius: 20px;
 }
 
 @media screen and (max-width: 800px) {
-  .About .column-one .about-text {
+  .About .column-one .about-text, .WhatIsIt .column-one .about-text {
     font-size: 2.5vh;
   }
-  .About .column-two .google-span {
+  .About .column-two .google-span, .WhatIsIt .column-two .google-span {
     width: 100%;
   }
-  .About .column-two .google-span #google-iframe {
+  .About .column-two .google-span #google-iframe, .WhatIsIt .column-two .google-span #google-iframe {
     width: 100%;
     height: 50vh;
   }
 }
 
 @media screen and (max-device-width: 800px) {
-  .About .column-two {
+  .About .column-two, .WhatIsIt .column-two {
     width: 75vw;
   }
-  .About .panos-gallery {
+  .About .panos-gallery, .WhatIsIt .panos-gallery {
     width: 70vw;
   }
-  .About .panos-gallery img {
+  .About .panos-gallery img, .WhatIsIt .panos-gallery img {
     max-width: 70vw;
   }
 }
@@ -571,7 +534,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 60vw;
-  max-width: 600px;
+  max-width: 650px;
   height: 30px;
   padding: 0;
   border-radius: 0.5rem;
@@ -601,7 +564,7 @@
 }
 
 .nav-menu li {
-  width: 25%;
+  width: 20%;
   text-align: center;
   display: block;
 }
@@ -823,8 +786,8 @@ ul li:last-of-type {
   color: #00acf0;
   cursor: pointer;
   z-index: 2;
-  -webkit-transition: bottom 0.5s ease;
-  transition: bottom 0.5s ease;
+  -webkit-transition: bottom 0.75s ease;
+  transition: bottom 0.75s ease;
 }
 
 .copyright-bar .fa-arrow-alt-circle-up.visible {
@@ -855,6 +818,7 @@ body {
   top: 0;
   left: 0;
   font-family: 'Roboto', sans-serif;
+  font-weight: 100;
   background: url("../assets/images/bg.jpg") center no-repeat;
   background-size: cover;
   color: white;
@@ -871,30 +835,30 @@ body {
   top: 0;
   left: 0;
   margin-bottom: 50px;
+  margin-top: 100px;
   overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* IE and Edge */
-  -ms-overflow-style: none;
   /* Firefox */
-  scrollbar-width: none;
 }
 
-.main::-webkit-scrollbar, .Projects::-webkit-scrollbar {
-  display: none;
+.main.no-margin, .no-margin.Projects {
+  margin-top: 0;
 }
 
 .inner-main {
   position: relative;
-  top: 100px;
+  top: 0px;
   left: 0px;
-  -webkit-transition: left 1s ease;
-  transition: left 1s ease;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
-@media screen and (max-width: 800px) {
-  .inner-main {
-    top: 80px;
-  }
+.inner-main.no-margin {
+  top: 100px;
 }
 
 .inner-main.hidden {
