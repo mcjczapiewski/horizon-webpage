@@ -10,34 +10,6 @@
     background-color: rgba(0, 0, 0, 0.665);
     @include rounded-shadow-border;
 
-    .showrooms {
-        display        : flex;
-        flex-direction : row;
-        align-items    : center;
-        justify-content: space-evenly;
-        width          : 85vw;
-
-        .wpg-span,
-        .szalas-span {
-
-            #wpg-museum,
-            #szalas-image {
-                width          : 300px;
-                height         : 300px;
-                object-fit     : cover;
-                object-position: center;
-                box-sizing     : border-box;
-                @include rounded-shadow-border;
-            }
-
-            .vignette {
-                &:hover {
-                    filter: opacity(80%);
-                }
-            }
-        }
-    }
-
     .icon-horizon {
         width: 35px;
     }
@@ -56,44 +28,32 @@
                 position  : relative;
                 text-align: center;
 
-                &:hover :not(.image-title) {
-                    filter: brightness(45%);
-                }
-
                 img {
                     @include rounded-shadow-border;
                 }
 
                 .image-title {
-                    position : absolute;
-                    top      : 50%;
-                    left     : 50%;
-                    transform: translate(-50%, -50%);
+                    position        : absolute;
+                    top             : 70%;
+                    left            : 50%;
+                    transform       : translate(-50%, -50%);
+                    background-color: hsla(0, 0%, 0%, 0.4);
                 }
-            }
-        }
-    }
 
-    @media screen and(max-width: 800px) {
-        .showrooms {
-            flex-direction: column;
+                &:hover {
+                    .image-title {
+                        background-color: unset;
+                    }
 
-            .wpg-span,
-            .szalas-span {
-
-                #wpg-museum,
-                #szalas-image {
-                    max-width: 100%;
-                    height   : auto;
+                    :not(.image-title) {
+                        filter: brightness(45%);
+                    }
                 }
             }
         }
     }
 
     @media screen and(max-device-width: 800px) {
-        .showrooms {
-            width: 75vw;
-        }
 
         .panos-gallery,
         .tours-gallery {
