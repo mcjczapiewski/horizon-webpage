@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import wpg from "../assets/images/wpg.jpg";
-import szalas from "../assets/images/szalas.jpg";
 
 const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     const panoRef = useRef(null);
@@ -24,7 +22,9 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     useEffect(() => {
         let isMounted = true;
         if (isMounted) {
+            // setTimeout(() => {
             getGalleryItems();
+            // }, 100);
             console.log(galleryItems);
         }
         return () => {
@@ -35,7 +35,8 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
 
     async function getGalleryItems() {
         const response = await fetch(
-            "https://horizon17.pl/vt/GalleryItems.json",
+            // "https://horizon17.pl/vt/GalleryItems.json",
+            "http://localhost:8010/proxy/vt/GalleryItems.json",
             {
                 method: "get",
                 headers: {
@@ -44,27 +45,16 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
                 },
             }
         );
-        const jsonData = await response.json();
-        setGalleryItems(jsonData);
-        console.log(galleryItems);
+        await response.json().then((jsonData) => setGalleryItems(jsonData));
     }
 
     return (
         <div className="Gallery">
             <br />
-            <h2 ref={vtRef}>Wycieczki wirtualne</h2>
+            <h2 ref={vtRef}>Wirtualne spacery</h2>
             <div className="tours-gallery">
                 {galleryItems.map(({ title, url, cName, imgLink, type }) => {
                     if (type === "VT") {
-                        return galleryRender(imgLink, cName, title, url);
-                    }
-                    return false;
-                })}
-            </div>
-            <h2>Wycieczki wirtualne firm</h2>
-            <div className="tours-gallery">
-                {galleryItems.map(({ title, url, cName, imgLink, type }) => {
-                    if (type === "cVT") {
                         return galleryRender(imgLink, cName, title, url);
                     }
                     return false;
@@ -78,34 +68,6 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
                     }
                     return false;
                 })}
-            </div>
-            <div className="showrooms">
-                <span className="wpg-span">
-                    <h4>
-                        Wykonaliśmy panoramy 360° do spaceru
-                        <br />
-                        wirtualnego po Muzeum Geodezji:
-                    </h4>
-                    <a
-                        href="https://www.wpg.com.pl/muzeum/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <div className="vignette">
-                            <img id="wpg-museum" src={wpg} alt="" />
-                        </div>
-                    </a>
-                </span>
-                <span className="szalas-span">
-                    <h4>
-                        Na życzenie wysyłamy na maila przykład
-                        <br />
-                        spaceru wirtualnego mieszkania.
-                        <br />
-                        Zapraszamy do kontaktu.
-                    </h4>
-                    <img id="szalas-image" src={szalas} alt="" />
-                </span>
             </div>
         </div>
     );
