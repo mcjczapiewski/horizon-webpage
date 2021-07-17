@@ -1,5 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import mapsIcon from "../assets/images/maps-icon.svg";
+import trusted from "../assets/images/trusted.png";
+import ania from "../assets/images/ania.png";
+import maciek from "../assets/images/maciek.png";
 
 const About = () => {
     return (
@@ -46,29 +50,36 @@ const About = () => {
                         <li>Salonów Fitness</li>
                         oraz wielu innych branż.
                     </ul>
-                    <div className="tell-us">
-                        Powiedz nam czego potrzebujesz i zapytaj o bezpłatną
-                        wycenę!
-                    </div>
                 </div>
             </div>
             <div className="column-two">
+                <div className="tell-us">
+                    Powiedz nam czego potrzebujesz i zapytaj o bezpłatną wycenę!
+                    <br />
+                    <br />
+                    <NavLink
+                        exact
+                        activeClassName="active"
+                        className="nav-links"
+                        to="/contact"
+                    >
+                        -&gt; KONTAKT &lt;-
+                    </NavLink>
+                    <br />
+                </div>
                 <span className="google-span">
+                    <span className="stuff-span">
+                        <img className="stuff" src={ania} alt="" />
+                        <img className="stuff" src={maciek} alt="" />
+                    </span>
+                    <br />
+                    <h5>Zaufaj autoryzowanym fotografom Google.</h5>
+                    <br />
+                    <img className="trusted" src={trusted} alt="" />
                     <span className="google-text">
-                        <h3>W wolnym czasie rozwijamy Google Street View</h3>
+                        <h5>W wolnym czasie rozwijamy Google Street View</h5>
                         <img className="maps-icon" src={mapsIcon} alt="" />
                     </span>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!4v1617820045342!6m8!1m7!1sCAoSLEFGMVFpcE0xSXZpbTFGak1YdFBsUWZOWFE3c2lWdWFEcWwtVlhLNVJ6eGZa!2m2!1d52.2678734!2d21.0618451!3f331.8381529629467!4f19.556747678851536!5f0.9028122286144149"
-                        width="600"
-                        height="500"
-                        style={{ border: "0" }}
-                        allowFullScreen=""
-                        loading="lazy"
-                        title="GoogleMaps"
-                        id="google-iframe"
-                        rel="noopener noreferrer"
-                    ></iframe>
                 </span>
             </div>
         </div>
