@@ -22,10 +22,7 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     useEffect(() => {
         let isMounted = true;
         if (isMounted) {
-            // setTimeout(() => {
             getGalleryItems();
-            // }, 100);
-            console.log(galleryItems);
         }
         return () => {
             isMounted = false;

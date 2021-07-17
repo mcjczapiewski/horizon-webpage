@@ -20,18 +20,24 @@
     }
 
     .fa-arrow-alt-circle-up {
-        position  : relative;
-        left      : 50%;
-        bottom    : 0;
-        font-size : 35px;
-        transform : translate(-50%, 0%);
-        color     : rgb(0, 172, 240);
-        cursor    : pointer;
-        z-index   : 2;
-        transition: bottom 0.75s ease;
+        position     : relative;
+        right        : -50%;
+        bottom       : 0;
+        font-size    : 35px;
+        transform    : translate(-50%, 0%);
+        transform    : rotate(180deg);
+        color        : rgb(0, 172, 240);
+        cursor       : pointer;
+        z-index      : 2;
+        transition   : bottom 0.75s ease;
+        // bottom    : 55px;
 
         &.visible {
             bottom: 55px;
+        }
+
+        &.rotate {
+            transform: rotate(0);
         }
     }
 

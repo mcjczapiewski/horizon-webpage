@@ -33,7 +33,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                 .classList.add("animate");
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
-                .classList.add("visible");
+                .classList.add("rotate");
             document
                 .getElementsByClassName("main")[0]
                 .classList.add("no-margin");
@@ -47,7 +47,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                 .classList.remove("animate");
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
-                .classList.remove("visible");
+                .classList.remove("rotate");
             document
                 .getElementsByClassName("main")[0]
                 .classList.remove("no-margin");
