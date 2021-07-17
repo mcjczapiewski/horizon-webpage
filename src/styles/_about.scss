@@ -21,15 +21,25 @@
         padding: 25px;
 
         .about-text {
-            max-width    : 800px;
-            // text-align: center;
-            font-size    : 1.4rem;
+            max-width : 800px;
+            text-align: justify;
+            font-size : 1.4rem;
 
-            ul {
-                padding-left: 20px;
+            p {
 
-                li {
-                    border: none;
+                ul {
+                    padding-left: 30px;
+                    list-style  : none;
+
+
+                    li {
+                        border: none;
+
+                        &:before {
+                            content     : '✓';
+                            margin-right: 10px;
+                        }
+                    }
                 }
             }
 
@@ -47,6 +57,7 @@
             font-size  : 1.8rem;
             text-align : center;
             font-weight: 300;
+            margin-top : 10px;
         }
 
         .google-span {
@@ -67,41 +78,29 @@
                     font-size : 1.6rem;
 
                     .stuff {
-                        width : 225px;
-                        height: 300px;
+                        width        : 225px;
+                        height       : 300px;
+                        margin       : 0 10px;
+                        border-radius: 15px;
 
-                        &.ania {
-                            border-radius: 20px 0 0 20px;
-                        }
-
-                        &.maciek {
-                            border-radius: 0 20px 20px 0;
-                        }
                     }
 
                     p {
                         margin: 10px 0px;
                     }
+
                 }
 
                 @media screen and(max-width: 800px) {
                     flex-direction: column;
-
-                    div {
-                        .stuff {
-
-                            &.ania,
-                            &.maciek {
-                                border-radius: 20px;
-                            }
-                        }
-                    }
                 }
             }
 
             .trusted {
-                width : 175px;
-                height: 206.5px;
+                width        : 175px;
+                height       : 206.5px;
+                border-radius: 15px;
+                ;
             }
 
             .google-text {
@@ -112,10 +111,17 @@
                 text-align     : center;
                 margin-top     : 10px;
 
-                .maps-icon {
+                a {
                     max-width  : 50px;
                     max-height : 50px;
-                    margin-left: 8px;
+                    width      : 100%;
+                    height     : 100%;
+                    margin-left: 5px;
+
+                    .maps-icon {
+                        max-width : 50px;
+                        max-height: 50px;
+                    }
                 }
             }
         }

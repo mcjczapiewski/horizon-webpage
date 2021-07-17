@@ -10,46 +10,58 @@ const About = () => {
         <div className="About">
             <div className="column-one">
                 <div className="about-text">
-                    Jesteśmy pasjonatami nowoczesnych rozwiązań i fotografii.
-                    <br />
-                    <br />
-                    Zaczynaliśmy od wykonywania ujęć z drona, a teraz schodzimy
-                    na ziemię i udostępniamy wirtualną rzeczywistość.
-                    <br />
-                    <br />
-                    Męska precyzja i znajomość najnowszych trendów
-                    informatycznych oraz kobiece poczucie estetyki i wrażliwość
-                    na detale pomogły nam stworzyć duet (prawie) idealny.
-                    <br />
-                    <br />
-                    Do każdego miejsca podchodzimy kreatywnie i nieszablonowo, a
-                    podczas realizacji projektu, dopracowujemy szczegóły do
-                    momentu, aż w spełni oczekiwania klienta.
-                    <br />
-                    <br />
-                    Realizujemy zlecenie na terenie całej Polski, a dojazd jest
-                    całkowicie bezpłatny.
-                    <br />
-                    <br />
-                    Skontaktuj się z nami, a pomożemy Ci zrealizować:
-                    <ul>
-                        <li>Panoramiczne zdjęcia 360°</li>
-                        <li>Wirtualny spacer</li>
-                        <li>Wizytówkę Google</li>
-                    </ul>
-                    Robimy zdjęcia dla:
-                    <ul>
-                        <li>Hoteli</li>
-                        <li>Restauracji</li>
-                        <li>Muzeów</li>
-                        <li>Atrakcji turystycznych</li>
-                        <li>Salonów kosmetycznych i fryzjerskich</li>
-                        <li>Gabinetów lekarskich i dentystycznych</li>
-                        <li>Deweloperów</li>
-                        <li>Sklepów</li>
-                        <li>Salonów Fitness</li>
-                        oraz wielu innych branż.
-                    </ul>
+                    <p>
+                        Jesteśmy pasjonatami nowoczesnych rozwiązań i
+                        fotografii.
+                    </p>
+                    <p>
+                        Zaczynaliśmy od wykonywania ujęć z drona, a teraz
+                        schodzimy na ziemię i udostępniamy wirtualną
+                        rzeczywistość.
+                    </p>
+                    <p>
+                        Męska precyzja i znajomość najnowszych trendów
+                        informatycznych oraz kobiece poczucie estetyki i
+                        wrażliwość na detale pomogły nam stworzyć duet (prawie)
+                        idealny.
+                    </p>
+                    <p>
+                        Do każdego miejsca podchodzimy kreatywnie i
+                        nieszablonowo, a podczas realizacji projektu,
+                        dopracowujemy szczegóły do momentu, aż spełni
+                        oczekiwania klienta.
+                    </p>
+                    <p>Realizujemy zlecenia na terenie całej Polski.</p>
+                    <p>
+                        Skontaktuj się z nami, a pomożemy Ci zrealizować:
+                        <ul>
+                            <li>Panoramiczne zdjęcia 360°</li>
+                            <li>Wirtualny spacer</li>
+                            <li>Wizytówkę Google</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Wykonujemy zdjęcia dla:
+                        <ul>
+                            <li>Hoteli</li>
+                            <li>Restauracji</li>
+                            <li>Muzeów</li>
+                            <li>Atrakcji turystycznych</li>
+                            <li>Salonów kosmetycznych i fryzjerskich</li>
+                            <li>Gabinetów lekarskich i dentystycznych</li>
+                            <li>Deweloperów</li>
+                            <li>Sklepów</li>
+                            <li>Salonów Fitness</li>
+                            oraz wielu innych branż.
+                        </ul>
+                    </p>
+                    <p>
+                        Fotografie robimy z wykorzystaniem profesjonalnego
+                        zestawu przeznaczonego do tego rodzaju prac. Obrazy
+                        uzyskane przez lustrzankowy aparat cyfrowy to lepsza
+                        jakość, wyższa rozdzielczość i dokładniej widoczne
+                        szczegóły w porównaniu do amatorskich kamer 360°.
+                    </p>
                 </div>
             </div>
             <div className="column-two">
@@ -84,7 +96,13 @@ const About = () => {
                     <img className="trusted" src={trusted} alt="" />
                     <span className="google-text">
                         <h5>W wolnym czasie rozwijamy Google Street View</h5>
-                        <img className="maps-icon" src={mapsIcon} alt="" />
+                        <a
+                            href="https://www.google.com/maps/contrib/111374012923096269518/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img className="maps-icon" src={mapsIcon} alt="" />
+                        </a>
                     </span>
                 </span>
             </div>

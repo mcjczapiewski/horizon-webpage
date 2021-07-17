@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 .Home {
   font-weight: 300;
@@ -365,15 +366,22 @@
 
 .About .column-one .about-text, .WhatIsIt .column-one .about-text {
   max-width: 800px;
+  text-align: justify;
   font-size: 1.4rem;
 }
 
-.About .column-one .about-text ul, .WhatIsIt .column-one .about-text ul {
-  padding-left: 20px;
+.About .column-one .about-text p ul, .WhatIsIt .column-one .about-text p ul {
+  padding-left: 30px;
+  list-style: none;
 }
 
-.About .column-one .about-text ul li, .WhatIsIt .column-one .about-text ul li {
+.About .column-one .about-text p ul li, .WhatIsIt .column-one .about-text p ul li {
   border: none;
+}
+
+.About .column-one .about-text p ul li:before, .WhatIsIt .column-one .about-text p ul li:before {
+  content: '✓';
+  margin-right: 10px;
 }
 
 .About .column-two, .WhatIsIt .column-two {
@@ -397,6 +405,7 @@
   font-size: 1.8rem;
   text-align: center;
   font-weight: 300;
+  margin-top: 10px;
 }
 
 .About .column-two .google-span, .WhatIsIt .column-two .google-span {
@@ -437,14 +446,8 @@
 .About .column-two .google-span .stuff-span div .stuff, .WhatIsIt .column-two .google-span .stuff-span div .stuff {
   width: 225px;
   height: 300px;
-}
-
-.About .column-two .google-span .stuff-span div .stuff.ania, .WhatIsIt .column-two .google-span .stuff-span div .stuff.ania {
-  border-radius: 20px 0 0 20px;
-}
-
-.About .column-two .google-span .stuff-span div .stuff.maciek, .WhatIsIt .column-two .google-span .stuff-span div .stuff.maciek {
-  border-radius: 0 20px 20px 0;
+  margin: 0 10px;
+  border-radius: 15px;
 }
 
 .About .column-two .google-span .stuff-span div p, .WhatIsIt .column-two .google-span .stuff-span div p {
@@ -458,14 +461,12 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .About .column-two .google-span .stuff-span div .stuff.ania, .WhatIsIt .column-two .google-span .stuff-span div .stuff.ania, .About .column-two .google-span .stuff-span div .stuff.maciek, .WhatIsIt .column-two .google-span .stuff-span div .stuff.maciek {
-    border-radius: 20px;
-  }
 }
 
 .About .column-two .google-span .trusted, .WhatIsIt .column-two .google-span .trusted {
   width: 175px;
   height: 206.5px;
+  border-radius: 15px;
 }
 
 .About .column-two .google-span .google-text, .WhatIsIt .column-two .google-span .google-text {
@@ -486,10 +487,17 @@
   margin-top: 10px;
 }
 
-.About .column-two .google-span .google-text .maps-icon, .WhatIsIt .column-two .google-span .google-text .maps-icon {
+.About .column-two .google-span .google-text a, .WhatIsIt .column-two .google-span .google-text a {
   max-width: 50px;
   max-height: 50px;
-  margin-left: 8px;
+  width: 100%;
+  height: 100%;
+  margin-left: 5px;
+}
+
+.About .column-two .google-span .google-text a .maps-icon, .WhatIsIt .column-two .google-span .google-text a .maps-icon {
+  max-width: 50px;
+  max-height: 50px;
 }
 
 @media screen and (max-width: 800px) {
@@ -822,11 +830,13 @@ ul li:last-of-type {
 
 .copyright-bar .fa-arrow-alt-circle-up {
   position: relative;
-  left: 50%;
+  right: -50%;
   bottom: 0;
   font-size: 35px;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   color: #00acf0;
   cursor: pointer;
   z-index: 2;
@@ -836,6 +846,11 @@ ul li:last-of-type {
 
 .copyright-bar .fa-arrow-alt-circle-up.visible {
   bottom: 55px;
+}
+
+.copyright-bar .fa-arrow-alt-circle-up.rotate {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .copyright-bar .copyright {
