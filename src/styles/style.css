@@ -416,18 +416,51 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .About .column-two .google-span .stuff-span, .WhatIsIt .column-two .google-span .stuff-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-.About .column-two .google-span .stuff-span .stuff, .WhatIsIt .column-two .google-span .stuff-span .stuff {
+.About .column-two .google-span .stuff-span div, .WhatIsIt .column-two .google-span .stuff-span div {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.About .column-two .google-span .stuff-span div .stuff, .WhatIsIt .column-two .google-span .stuff-span div .stuff {
   width: 225px;
   height: 300px;
+}
+
+.About .column-two .google-span .stuff-span div .stuff.ania, .WhatIsIt .column-two .google-span .stuff-span div .stuff.ania {
+  border-radius: 20px 0 0 20px;
+}
+
+.About .column-two .google-span .stuff-span div .stuff.maciek, .WhatIsIt .column-two .google-span .stuff-span div .stuff.maciek {
+  border-radius: 0 20px 20px 0;
+}
+
+.About .column-two .google-span .stuff-span div p, .WhatIsIt .column-two .google-span .stuff-span div p {
+  margin: 10px 0px;
+}
+
+@media screen and (max-width: 800px) {
+  .About .column-two .google-span .stuff-span, .WhatIsIt .column-two .google-span .stuff-span {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .About .column-two .google-span .stuff-span div .stuff.ania, .WhatIsIt .column-two .google-span .stuff-span div .stuff.ania, .About .column-two .google-span .stuff-span div .stuff.maciek, .WhatIsIt .column-two .google-span .stuff-span div .stuff.maciek {
+    border-radius: 20px;
+  }
 }
 
 .About .column-two .google-span .trusted, .WhatIsIt .column-two .google-span .trusted {
@@ -833,6 +866,7 @@ body {
   background: url("../assets/images/bg.jpg") center no-repeat;
   background-size: cover;
   color: white;
+  overflow-x: hidden;
 }
 
 * {

@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import mapsIcon from "../assets/images/maps-icon.svg";
 import trusted from "../assets/images/trusted.png";
-import ania from "../assets/images/ania.png";
-import maciek from "../assets/images/maciek.png";
+import ania from "../assets/images/ania-cien.jpg";
+import maciek from "../assets/images/maciek-cien.jpg";
 
 const About = () => {
     return (
@@ -66,13 +66,19 @@ const About = () => {
                         -&gt; KONTAKT &lt;-
                     </NavLink>
                     <br />
+                    <br />
                 </div>
                 <span className="google-span">
                     <span className="stuff-span">
-                        <img className="stuff" src={ania} alt="" />
-                        <img className="stuff" src={maciek} alt="" />
+                        <div>
+                            <img className="stuff ania" src={ania} alt="" />
+                            <p>Ania</p>
+                        </div>
+                        <div>
+                            <img className="stuff maciek" src={maciek} alt="" />
+                            <p>Maciek</p>
+                        </div>
                     </span>
-                    <br />
                     <h5>Zaufaj autoryzowanym fotografom Google.</h5>
                     <br />
                     <img className="trusted" src={trusted} alt="" />
