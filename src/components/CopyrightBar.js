@@ -12,7 +12,7 @@ const CopyrightBar = ({ scrollToTop }) => {
         const height =
             document.getElementsByClassName("inner-main")[0].clientHeight;
         const pageHeight = window.innerHeight;
-        if (height > pageHeight - 80 - 50 || location.pathname == "/gallery") {
+        if (height > pageHeight - 80 - 50 || location.pathname === "/gallery") {
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.add("visible");

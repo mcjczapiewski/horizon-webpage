@@ -10,10 +10,10 @@ const About = () => {
         <div className="About">
             <div className="column-one">
                 <div className="about-text">
-                    <p>
+                    <h4>
                         Jesteśmy pasjonatami nowoczesnych rozwiązań i
                         fotografii.
-                    </p>
+                    </h4>
                     <p>
                         Zaczynaliśmy od wykonywania ujęć z drona, a teraz
                         schodzimy na ziemię i udostępniamy wirtualną
@@ -31,30 +31,26 @@ const About = () => {
                         dopracowujemy szczegóły do momentu, aż spełni
                         oczekiwania klienta.
                     </p>
-                    <p>Realizujemy zlecenia na terenie całej Polski.</p>
-                    <p>
-                        Skontaktuj się z nami, a pomożemy Ci zrealizować:
-                        <ul>
-                            <li>Panoramiczne zdjęcia 360°</li>
-                            <li>Wirtualny spacer</li>
-                            <li>Wizytówkę Google</li>
-                        </ul>
-                    </p>
-                    <p>
-                        Wykonujemy zdjęcia dla:
-                        <ul>
-                            <li>Hoteli</li>
-                            <li>Restauracji</li>
-                            <li>Muzeów</li>
-                            <li>Atrakcji turystycznych</li>
-                            <li>Salonów kosmetycznych i fryzjerskich</li>
-                            <li>Gabinetów lekarskich i dentystycznych</li>
-                            <li>Deweloperów</li>
-                            <li>Sklepów</li>
-                            <li>Salonów Fitness</li>
-                            oraz wielu innych branż.
-                        </ul>
-                    </p>
+                    <h4>Realizujemy zlecenia na terenie całej Polski.</h4>
+                    <h4>Skontaktuj się z nami, a pomożemy Ci zrealizować:</h4>
+                    <ul>
+                        <li>Panoramiczne zdjęcia 360°</li>
+                        <li>Wirtualny spacer</li>
+                        <li>Wizytówkę Google</li>
+                    </ul>
+                    <h4>Wykonujemy zdjęcia dla:</h4>
+                    <ul>
+                        <li>Hoteli</li>
+                        <li>Restauracji</li>
+                        <li>Muzeów</li>
+                        <li>Atrakcji turystycznych</li>
+                        <li>Salonów kosmetycznych i fryzjerskich</li>
+                        <li>Gabinetów lekarskich i dentystycznych</li>
+                        <li>Deweloperów</li>
+                        <li>Sklepów</li>
+                        <li>Salonów Fitness</li>
+                    </ul>
+                    <p className="branz">oraz wielu innych branż.</p>
                     <p>
                         Fotografie robimy z wykorzystaniem profesjonalnego
                         zestawu przeznaczonego do tego rodzaju prac. Obrazy
@@ -66,16 +62,18 @@ const About = () => {
             </div>
             <div className="column-two">
                 <div className="tell-us">
-                    Powiedz nam czego potrzebujesz i zapytaj o bezpłatną wycenę!
-                    <br />
-                    <br />
+                    <p>
+                        Powiedz nam czego potrzebujesz i zapytaj o bezpłatną
+                        wycenę!
+                    </p>
                     <NavLink
                         exact
                         activeClassName="active"
                         className="nav-links"
                         to="/contact"
                     >
-                        -&gt; KONTAKT &lt;-
+                        {/* -&gt; KONTAKT &lt;- */}
+                        👉 KONTAKT 👈
                     </NavLink>
                     <br />
                     <br />
