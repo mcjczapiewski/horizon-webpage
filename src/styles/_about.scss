@@ -25,24 +25,19 @@
             text-align: justify;
             font-size : 1.4rem;
 
-            p {
+            ul {
+                padding-left: 30px;
+                list-style  : none;
 
-                ul {
-                    padding-left: 30px;
-                    list-style  : none;
+                li {
+                    border: none;
 
-
-                    li {
-                        border: none;
-
-                        &:before {
-                            content     : '✓';
-                            margin-right: 10px;
-                        }
+                    &:before {
+                        content     : '✓';
+                        margin-right: 10px;
                     }
                 }
             }
-
         }
     }
 
@@ -58,6 +53,15 @@
             text-align : center;
             font-weight: 300;
             margin-top : 10px;
+
+            p {
+                margin-top: 0;
+            }
+
+            .nav-links {
+                font-size: 1.8rem;
+
+            }
         }
 
         .google-span {
@@ -78,8 +82,8 @@
                     font-size : 1.6rem;
 
                     .stuff {
-                        width        : 225px;
-                        height       : 300px;
+                        width        : 150px;
+                        height       : 200px;
                         margin       : 0 10px;
                         border-radius: 15px;
 

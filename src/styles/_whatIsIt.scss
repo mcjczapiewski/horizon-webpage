@@ -1,3 +1,75 @@
 .WhatIsIt {
     @extend .About;
+
+    .column-one {
+        display        : flex;
+        justify-content: center;
+
+        .about-text {
+            max-width            : 75%;
+            display              : grid;
+            align-items          : center;
+            justify-items        : center;
+            grid-template-columns: repeat(5, 20%);
+            grid-template-areas  : "a a a b b"
+                "c c d d d"
+                "e e e f f"
+                "g g g g g";
+
+            @media screen and (max-width: 1300px) {
+                max-width: 100%;
+
+                .going-up-img {
+                    max-width: 250px;
+                }
+            }
+
+            @media screen and (max-width:800px) {
+                grid-template-areas:
+                    "a a a a a"
+                    "b b b b b"
+                    "d d d d d"
+                    "c c c c c"
+                    "e e e e e"
+                    "f f f f f"
+                    "g g g g g"
+                ;
+            }
+
+            .person {
+                grid-area: a;
+            }
+
+            .person-img {
+                grid-area          : b;
+                height             : 200px;
+                // background-color: white;
+                // border-radius   : 15px;
+            }
+
+            .emblem-img {
+                grid-area: c;
+                height   : 200px;
+            }
+
+            .emblem {
+                grid-area: d;
+            }
+
+            .going-up {
+                grid-area: e;
+            }
+
+            .going-up-img {
+                grid-area : f;
+                max-height: 250px;
+
+            }
+
+            h3 {
+                grid-area : g;
+                text-align: center;
+            }
+        }
+    }
 }
