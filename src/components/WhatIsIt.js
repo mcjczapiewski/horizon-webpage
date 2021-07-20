@@ -17,10 +17,9 @@ const WhatIsIt = () => {
                             Wirtualny spacer to nic innego jak połączenie kilku
                             panoramicznych zdjęć w całość. Za pomocą kilku
                             kliknięć potencjalni klienci mogą przenieść się do
-                            restauracji, siłowni czy salonu kosmetycznego z
+                            restauracji, siłowni czy salonu kosmetycznego, z
                             którego chcą skorzystać i dowiedzieć czego mogą
-                            spodziewać się na miejscu. Przespacerują się po nim,
-                            tak jakby byli na miejscu.
+                            spodziewać się na miejscu.
                         </p>
                     </div>
                     <img className="person-img" src={guy} alt="" />
@@ -35,9 +34,9 @@ const WhatIsIt = () => {
                             Kluczowym elementem jest przypięcie wirtualnego
                             spaceru do wizytówki w mapach Google. Dzięki temu
                             każdy, kto wyszuka Twoją firmę w wyszukiwarce
-                            Google, na mapie Google, lub wejdzie na Twoją stronę
-                            internetową, będzie mógł go zobaczyć. Warto umieścić
-                            również link do spaceru na firmowym Facebooku.
+                            Google, na mapie Google lub wejdzie na Twoją stronę
+                            internetową, będzie mógł go zobaczyć. Warto również
+                            umieścić link do spaceru na firmowym Facebooku.
                         </p>
                     </div>
                     <div className="going-up">

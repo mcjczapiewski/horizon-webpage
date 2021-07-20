@@ -381,7 +381,7 @@
 
 .About .column-one .about-text ul li:before, .WhatIsIt .column-one .about-text ul li:before {
   content: '✓';
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .About .column-two, .WhatIsIt .column-two {

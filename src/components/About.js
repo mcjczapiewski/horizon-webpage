@@ -32,7 +32,7 @@ const About = () => {
                         oczekiwania klienta.
                     </p>
                     <h4>Realizujemy zlecenia na terenie całej Polski.</h4>
-                    <h4>Skontaktuj się z nami, a pomożemy Ci zrealizować:</h4>
+                    <h4>Skontaktuj się z nami, a stworzymy dla Ciebie:</h4>
                     <ul>
                         <li>Panoramiczne zdjęcia 360°</li>
                         <li>Wirtualny spacer</li>
@@ -72,7 +72,6 @@ const About = () => {
                         className="nav-links"
                         to="/contact"
                     >
-                        {/* -&gt; KONTAKT &lt;- */}
                         👉 KONTAKT 👈
                     </NavLink>
                     <br />
