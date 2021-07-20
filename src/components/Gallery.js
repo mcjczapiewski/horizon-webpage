@@ -32,8 +32,8 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
 
     async function getGalleryItems() {
         const response = await fetch(
-            // "https://horizon17.pl/vt/GalleryItems.json",
-            "http://localhost:8010/proxy/vt/GalleryItems.json",
+            "https://horizon17.pl/vt/GalleryItems.json",
+            // "http://localhost:8010/proxy/vt/GalleryItems.json",
             {
                 method: "get",
                 headers: {
