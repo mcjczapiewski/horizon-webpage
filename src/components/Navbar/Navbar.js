@@ -34,12 +34,6 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.add("rotate");
-            document
-                .getElementsByClassName("main")[0]
-                .classList.add("no-margin");
-            document
-                .getElementsByClassName("inner-main")[0]
-                .classList.add("no-margin");
             setClickedMenuBtn(false);
         } else if (e.target.scrollTop < 40) {
             document
@@ -48,12 +42,6 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.remove("rotate");
-            document
-                .getElementsByClassName("main")[0]
-                .classList.remove("no-margin");
-            document
-                .getElementsByClassName("inner-main")[0]
-                .classList.remove("no-margin");
         }
     };
 

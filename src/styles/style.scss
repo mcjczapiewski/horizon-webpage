@@ -38,15 +38,10 @@ body {
     top          : 0;
     left         : 0;
     margin-bottom: 50px;
-    margin-top   : 100px;
+    margin-top   : 0;
     overflow-y   : auto;
     overflow-x   : hidden;
-
-    transition: all 0.5s;
-
-    &.no-margin {
-        margin-top: 0;
-    }
+    z-index      : 0;
 
     /* Hide scrollbar for Chrome, Safari and Opera */
     // &::-webkit-scrollbar {
@@ -61,14 +56,10 @@ body {
 
 .inner-main {
     position: relative;
-    top     : 0px;
+    top     : 100px;
     left    : 0px;
 
     transition: all 0.7s;
-
-    &.no-margin {
-        top: 100px;
-    }
 
     &.hidden {
         left: -1000px;
