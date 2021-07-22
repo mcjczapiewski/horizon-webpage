@@ -1,18 +1,14 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { ExternalLinks } from "./ExternalLinks";
 
-const CopyrightBar = ({ scrollToTop }) => {
+const CopyrightBar = ({ scrollToTop, height }) => {
     const executeScroll = () => {
         scrollToTop.current.scrollTo(0, 0);
     };
-    const location = useLocation();
 
     useEffect(() => {
-        const height =
-            document.getElementsByClassName("inner-main")[0].clientHeight;
         const pageHeight = window.innerHeight;
-        if (height > pageHeight - 80 - 50 || location.pathname === "/gallery") {
+        if (height > pageHeight - 80 - 50) {
             document
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.add("visible");
@@ -22,7 +18,7 @@ const CopyrightBar = ({ scrollToTop }) => {
                 .getElementsByClassName("fa-arrow-alt-circle-up")[0]
                 .classList.remove("visible");
         };
-    }, [location.pathname]);
+    }, [height]);
 
     return (
         <div className="copyright-bar">
