@@ -838,13 +838,11 @@ ul li:last-of-type {
 
 .copyright-bar .fa-arrow-alt-circle-up {
   position: relative;
-  right: -50%;
+  left: 50%;
   bottom: 0;
   font-size: 35px;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: translate(-50%, 0%) rotate(180deg);
+          transform: translate(-50%, 0%) rotate(180deg);
   color: #00acf0;
   cursor: pointer;
   z-index: 2;
@@ -857,8 +855,8 @@ ul li:last-of-type {
 }
 
 .copyright-bar .fa-arrow-alt-circle-up.rotate {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+  -webkit-transform: translate(-50%, 0%) rotate(0);
+          transform: translate(-50%, 0%) rotate(0);
 }
 
 .copyright-bar .copyright {
