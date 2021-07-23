@@ -308,7 +308,7 @@
           justify-content: center;
   margin: auto;
   margin-top: 10px;
-  width: 400px;
+  max-width: 400px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.665);
   border-radius: 20px;
@@ -325,7 +325,8 @@
 
 @media screen and (max-device-width: 800px) {
   .Contact {
-    zoom: 75%;
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
   }
 }
 
