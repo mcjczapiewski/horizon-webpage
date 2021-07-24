@@ -1,12 +1,11 @@
 .Contact {
-    display         : flex;
-    flex-direction  : column;
-    justify-content : center;
-    margin          : auto;
-    margin-top      : 10px;
-    max-width       : 400px;
-    text-align      : center;
-    background-color: rgba(0, 0, 0, 0.665);
+    display              : grid;
+    grid-template-columns: 50% 50%;
+    margin               : auto;
+    margin-top           : 10px;
+    max-width            : 800px;
+    text-align           : center;
+    background-color     : rgba(0, 0, 0, 0.665);
     @include rounded-shadow-border;
 
     a {
@@ -20,7 +19,54 @@
         }
     }
 
-    @media screen and (max-device-width: 800px) {
-        transform: scale(0.75);
+    .column-two {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+
+        form,
+        .thank-you {
+            font-size: 1.1rem;
+        }
+
+        label {
+            :not(form-field) {
+                margin: 5px 0;
+            }
+        }
+
+        textarea,
+        input,
+        .btn-write-again {
+            margin       : 15px 0;
+            padding      : 5px 10px;
+            border-radius: 5px;
+            resize       : none;
+            border       : none;
+        }
+
+        .form-field.btn,
+        .btn-write-again {
+            color           : white;
+            background-color: rgba(0, 172, 240, 0.7);
+        }
     }
+
+    @media screen and (max-width: 800px) {
+        @media screen and (max-device-width: 800px) {
+            transform       : scale(0.75);
+            transform-origin: top;
+
+            .column-two {
+                .btn {
+                    padding: 10px;
+                }
+            }
+        }
+
+        display       : flex;
+        flex-direction: column;
+        max-width     : 400px;
+    }
+
 }

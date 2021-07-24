@@ -6,8 +6,8 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     const vtRef = useRef(null);
     const [galleryItems, setGalleryItems] = useState([]);
     const [renderGallery, setRenderGallery] = useState(false);
-    const apiLink = "http://localhost:8010/proxy/vt/GalleryItems.json";
-    // const apiLink = "https://horizon17.pl/vt/GalleryItems.json";
+    // const apiLink = "http://localhost:8010/proxy/vt/GalleryItems.json";
+    const apiLink = "https://horizon17.pl/vt/GalleryItems.json";
 
     useEffect(() => {
         if (panoScroll) {
