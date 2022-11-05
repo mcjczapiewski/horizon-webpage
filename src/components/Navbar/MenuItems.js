@@ -1,6 +1,6 @@
 export const MenuItems = [
     {
-        title: "CO TO JEST?",
+        title: "CZY WARTO?",
         url: "/whatisit",
         cName: "nav-links",
     },
@@ -9,14 +9,19 @@ export const MenuItems = [
         url: "/gallery",
         cName: "nav-links",
     },
-    {
+    /* {
         title: "REALIZACJE",
         url: "/projects",
         cName: "nav-links",
-    },
+    }, */
     {
         title: "O NAS",
         url: "/about",
+        cName: "nav-links",
+    },
+    {
+        title: "CENNIK",
+        url: "/prices",
         cName: "nav-links",
     },
     {

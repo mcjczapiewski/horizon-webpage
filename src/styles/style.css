@@ -284,7 +284,7 @@
   }
 }
 
-.About, .WhatIsIt {
+.About, .Prices, .WhatIsIt {
   position: relative;
   top: 20px;
   left: 0px;
@@ -298,49 +298,49 @@
   border-radius: 20px;
 }
 @media screen and (max-width: 1200px) {
-  .About, .WhatIsIt {
+  .About, .Prices, .WhatIsIt {
     flex-direction: column;
   }
 }
-.About .column-one, .WhatIsIt .column-one {
+.About .column-one, .Prices .column-one, .WhatIsIt .column-one {
   padding: 25px;
 }
-.About .column-one .about-text, .WhatIsIt .column-one .about-text {
+.About .column-one .about-text, .Prices .column-one .about-text, .WhatIsIt .column-one .about-text {
   max-width: 800px;
   text-align: justify;
   font-size: 1.4rem;
 }
-.About .column-one .about-text ul, .WhatIsIt .column-one .about-text ul {
+.About .column-one .about-text ul, .Prices .column-one .about-text ul, .WhatIsIt .column-one .about-text ul {
   padding-left: 30px;
   list-style: none;
 }
-.About .column-one .about-text ul li, .WhatIsIt .column-one .about-text ul li {
+.About .column-one .about-text ul li, .Prices .column-one .about-text ul li, .WhatIsIt .column-one .about-text ul li {
   border: none;
 }
-.About .column-one .about-text ul li:before, .WhatIsIt .column-one .about-text ul li:before {
+.About .column-one .about-text ul li:before, .Prices .column-one .about-text ul li:before, .WhatIsIt .column-one .about-text ul li:before {
   content: "✓";
   margin-right: 5px;
 }
-.About .column-two, .WhatIsIt .column-two {
+.About .column-two, .Prices .column-two, .WhatIsIt .column-two {
   margin: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.About .column-two .tell-us, .WhatIsIt .column-two .tell-us {
+.About .column-two .tell-us, .Prices .column-two .tell-us, .WhatIsIt .column-two .tell-us {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 300;
   margin-top: 10px;
 }
-.About .column-two .tell-us p, .WhatIsIt .column-two .tell-us p {
+.About .column-two .tell-us p, .Prices .column-two .tell-us p, .WhatIsIt .column-two .tell-us p {
   margin-top: 0;
 }
-.About .column-two .tell-us .nav-links, .WhatIsIt .column-two .tell-us .nav-links {
+.About .column-two .tell-us .nav-links, .Prices .column-two .tell-us .nav-links, .WhatIsIt .column-two .tell-us .nav-links {
   font-size: 1.8rem;
 }
-.About .column-two .google-span, .WhatIsIt .column-two .google-span {
+.About .column-two .google-span, .Prices .column-two .google-span, .WhatIsIt .column-two .google-span {
   align-self: normal;
   display: flex;
   flex-direction: column;
@@ -349,34 +349,34 @@
   font-size: 1.4rem;
   text-align: center;
 }
-.About .column-two .google-span .stuff-span, .WhatIsIt .column-two .google-span .stuff-span {
+.About .column-two .google-span .stuff-span, .Prices .column-two .google-span .stuff-span, .WhatIsIt .column-two .google-span .stuff-span {
   display: flex;
   flex-direction: row;
 }
-.About .column-two .google-span .stuff-span div, .WhatIsIt .column-two .google-span .stuff-span div {
+.About .column-two .google-span .stuff-span div, .Prices .column-two .google-span .stuff-span div, .WhatIsIt .column-two .google-span .stuff-span div {
   text-align: center;
   font-size: 1.6rem;
 }
-.About .column-two .google-span .stuff-span div .stuff, .WhatIsIt .column-two .google-span .stuff-span div .stuff {
+.About .column-two .google-span .stuff-span div .stuff, .Prices .column-two .google-span .stuff-span div .stuff, .WhatIsIt .column-two .google-span .stuff-span div .stuff {
   width: 150px;
   height: 200px;
   margin: 0 10px;
   border-radius: 15px;
 }
-.About .column-two .google-span .stuff-span div p, .WhatIsIt .column-two .google-span .stuff-span div p {
+.About .column-two .google-span .stuff-span div p, .Prices .column-two .google-span .stuff-span div p, .WhatIsIt .column-two .google-span .stuff-span div p {
   margin: 10px 0px;
 }
 @media screen and (max-width: 800px) {
-  .About .column-two .google-span .stuff-span, .WhatIsIt .column-two .google-span .stuff-span {
+  .About .column-two .google-span .stuff-span, .Prices .column-two .google-span .stuff-span, .WhatIsIt .column-two .google-span .stuff-span {
     flex-direction: column;
   }
 }
-.About .column-two .google-span .trusted, .WhatIsIt .column-two .google-span .trusted {
+.About .column-two .google-span .trusted, .Prices .column-two .google-span .trusted, .WhatIsIt .column-two .google-span .trusted {
   width: 175px;
   height: 206.5px;
   border-radius: 15px;
 }
-.About .column-two .google-span .google-text, .WhatIsIt .column-two .google-span .google-text {
+.About .column-two .google-span .google-text, .Prices .column-two .google-span .google-text, .WhatIsIt .column-two .google-span .google-text {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -384,33 +384,33 @@
   text-align: center;
   margin-top: 10px;
 }
-.About .column-two .google-span .google-text a, .WhatIsIt .column-two .google-span .google-text a {
+.About .column-two .google-span .google-text a, .Prices .column-two .google-span .google-text a, .WhatIsIt .column-two .google-span .google-text a {
   max-width: 50px;
   max-height: 50px;
   width: 100%;
   height: 100%;
   margin-left: 5px;
 }
-.About .column-two .google-span .google-text a .maps-icon, .WhatIsIt .column-two .google-span .google-text a .maps-icon {
+.About .column-two .google-span .google-text a .maps-icon, .Prices .column-two .google-span .google-text a .maps-icon, .WhatIsIt .column-two .google-span .google-text a .maps-icon {
   max-width: 50px;
   max-height: 50px;
 }
 @media screen and (max-width: 800px) {
-  .About .column-one .about-text, .WhatIsIt .column-one .about-text {
+  .About .column-one .about-text, .Prices .column-one .about-text, .WhatIsIt .column-one .about-text {
     font-size: 2.5vh;
   }
-  .About .column-two .google-span, .WhatIsIt .column-two .google-span {
+  .About .column-two .google-span, .Prices .column-two .google-span, .WhatIsIt .column-two .google-span {
     width: 100%;
   }
 }
 @media screen and (max-device-width: 800px) {
-  .About .column-two, .WhatIsIt .column-two {
+  .About .column-two, .Prices .column-two, .WhatIsIt .column-two {
     width: 75vw;
   }
-  .About .panos-gallery, .WhatIsIt .panos-gallery {
+  .About .panos-gallery, .Prices .panos-gallery, .WhatIsIt .panos-gallery {
     width: 70vw;
   }
-  .About .panos-gallery img, .WhatIsIt .panos-gallery img {
+  .About .panos-gallery img, .Prices .panos-gallery img, .WhatIsIt .panos-gallery img {
     max-width: 70vw;
   }
 }
