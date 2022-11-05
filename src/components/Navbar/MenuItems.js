@@ -1,26 +1,26 @@
 export const MenuItems = [
     {
-        title: "Co to jest?",
+        title: "CO TO JEST?",
         url: "/whatisit",
         cName: "nav-links",
     },
     {
-        title: "Galeria",
+        title: "GALERIA",
         url: "/gallery",
         cName: "nav-links",
     },
     {
-        title: "Realizacje",
+        title: "REALIZACJE",
         url: "/projects",
         cName: "nav-links",
     },
     {
-        title: "O nas",
+        title: "O NAS",
         url: "/about",
         cName: "nav-links",
     },
     {
-        title: "Kontakt",
+        title: "KONTAKT",
         url: "/contact",
         cName: "nav-links",
     },
