@@ -113,16 +113,19 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                         <Link
                                             exact
                                             to="/gallery"
-                                            onClick={() => setVtScroll(true)}
+                                            /* onClick={() => setVtScroll(true)} */
                                         >
-                                            Wirtualne spacery
+                                            SPACERY I PANORAMY
                                         </Link>
-                                        <Link
+                                        {/* <Link
                                             exact
                                             to="/gallery"
                                             onClick={() => setPanoScroll(true)}
                                         >
                                             Panoramy
+                                        </Link> */}
+                                        <Link exact to="/gallery">
+                                            WNĘTRZA
                                         </Link>
                                     </div>
                                 </>

@@ -1,6 +1,6 @@
 export const MenuItems = [
     {
-        title: "CZY WARTO?",
+        title: "DLACZEGO WARTO?",
         url: "/whatisit",
         cName: "nav-links",
     },
