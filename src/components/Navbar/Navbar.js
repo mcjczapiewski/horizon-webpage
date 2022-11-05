@@ -91,7 +91,8 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                 </NavLink>
                                 <img
                                     className={`chevron-right ${
-                                        clickedMenuBtn && title === "Galeria"
+                                        clickedMenuBtn &&
+                                        title.toLowerCase() === "galeria"
                                             ? "active"
                                             : ""
                                     }`}
@@ -100,7 +101,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                     alt=""
                                 />
                             </div>
-                            {title === "Galeria" && (
+                            {title.toLowerCase() === "galeria" && (
                                 <>
                                     <div
                                         className={
