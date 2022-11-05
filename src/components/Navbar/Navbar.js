@@ -56,7 +56,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
             <nav className="navbar-items">
                 <NavLink
                     className="navbar-logo"
-                    to="/"
+                    to="/aniapanato"
                     onClick={() => {
                         setClickedMenuBtn(false);
                     }}
