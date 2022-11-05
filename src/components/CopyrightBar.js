@@ -27,7 +27,7 @@ const CopyrightBar = ({ scrollToTop, height }) => {
                 className="far fa-arrow-alt-circle-up"
                 onClick={executeScroll}
             ></i>
-            <div className="copyright">© Horizon17 Virtual Tours 2021</div>;
+            <div className="copyright">© Horizon17 2022</div>;
         </div>
     );
 };
