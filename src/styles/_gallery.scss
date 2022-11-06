@@ -30,17 +30,25 @@
 
                 img {
                     @include rounded-shadow-border;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-color: rgb(0, 172, 240);
                 }
 
                 .image-title {
                     position        : absolute;
                     top             : 70%;
                     left            : 50%;
+                    width           : calc(100% - 4px);
                     transform       : translate(-50%, -50%);
                     background-color: hsla(0, 0%, 0%, 0.4);
                 }
 
                 &:hover {
+                    img {
+                        border-color: hsla(0, 0%, 0%, 0.9)
+                    }
+
                     .image-title {
                         background-color: unset;
                     }
