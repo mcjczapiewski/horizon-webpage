@@ -42,6 +42,13 @@
         "type": "VT"
     },
     {
+        "title": "Widokówka, Wetlina",
+        "url": "/vt/widokowka",
+        "cName": "pano-links",
+        "imgLink": "widokowka.jpg",
+        "type": "VT"
+    },
+    {
         "title": "Panoramy dla Muzeum Geodezji",
         "url": "https://www.wpg.com.pl/muzeum/",
         "cName": "pano-links",
