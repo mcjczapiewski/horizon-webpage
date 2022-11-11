@@ -162,14 +162,22 @@
 .Gallery .panos-gallery .pano-links .panos-container img,
 .Gallery .tours-gallery .pano-links .panos-container img {
   border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(0, 172, 240);
 }
 .Gallery .panos-gallery .pano-links .panos-container .image-title,
 .Gallery .tours-gallery .pano-links .panos-container .image-title {
   position: absolute;
   top: 70%;
   left: 50%;
+  width: calc(100% - 4px);
   transform: translate(-50%, -50%);
   background-color: hsla(0deg, 0%, 0%, 0.4);
+}
+.Gallery .panos-gallery .pano-links .panos-container:hover img,
+.Gallery .tours-gallery .pano-links .panos-container:hover img {
+  border-color: hsla(0deg, 0%, 0%, 0.9);
 }
 .Gallery .panos-gallery .pano-links .panos-container:hover .image-title,
 .Gallery .tours-gallery .pano-links .panos-container:hover .image-title {
@@ -255,6 +263,7 @@
 }
 .Contact .column-two textarea,
 .Contact .column-two input,
+.Contact .column-two button,
 .Contact .column-two .btn-write-again {
   margin: 15px 0;
   padding: 5px 10px;
@@ -266,6 +275,14 @@
 .Contact .column-two .btn-write-again {
   color: white;
   background-color: rgba(0, 172, 240, 0.7);
+}
+.Contact .column-two .form-field.btn[disabled],
+.Contact .column-two .btn-write-again[disabled] {
+  background-color: rgba(0, 172, 240, 0.214);
+}
+.Contact .column-two .form-field.btn.clicked,
+.Contact .column-two .btn-write-again.clicked {
+  pointer-events: none;
 }
 @media screen and (max-width: 800px) {
   .Contact {
@@ -503,7 +520,7 @@
   border-bottom: none;
 }
 .nav-menu li .dropdown-menu a:hover {
-  color: black;
+  color: rgb(0, 172, 240);
 }
 .nav-menu li:hover .nav-links {
   color: black;
@@ -695,12 +712,10 @@ ul li:last-of-type {
   position: absolute;
   bottom: 2vh;
   right: 2vw;
-  font-size: 1.5vh;
-}
-@media screen and (max-device-width: 1024px) {
-  .copyright-bar .copyright {
-    font-size: 1vh;
-  }
+  font-size: 1rem;
+  /*     @media screen and (max-device-width :1024px) {
+      font-size: 1vh;
+  } */
 }
 
 .WhatIsIt .column-one {
