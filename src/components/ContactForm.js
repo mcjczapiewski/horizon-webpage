@@ -5,9 +5,24 @@ const ContactForm = () => {
     const [formSent, setFormSent] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [inputText, setInputText] = useState("");
+    const [clickedBtn, setClickedBtn] = useState(false);
+    const [userName, setUserName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
 
-    const inputTextHandler = (e) => {
-        setInputText(e.target.value);
+    const validate = () => {
+        if (
+            userName.length > 0 &&
+            userEmail.length > 0 &&
+            inputText.length > 0 &&
+            userEmail.includes("@")
+        ) {
+            return true;
+        }
+    };
+
+    const againMsgHandler = () => {
+        setClickedBtn(false);
+        setFormSent(false);
     };
 
     const saveSessionMessage = (msg) => {
@@ -110,6 +125,8 @@ const ContactForm = () => {
                                 autoComplete="name"
                                 maxLength="100"
                                 required
+                                value={userName}
+                                onChange={(e) => setUserName(e.target.value)}
                             />
                         </label>
                         <label>
@@ -123,6 +140,8 @@ const ContactForm = () => {
                                 autoComplete="email"
                                 maxLength="100"
                                 required
+                                value={userEmail}
+                                onChange={(e) => setUserEmail(e.target.value)}
                             />
                         </label>
                         <label>
@@ -138,17 +157,23 @@ const ContactForm = () => {
                                 rows="10"
                                 required
                                 defaultValue={inputText}
-                                onChange={inputTextHandler}
+                                onChange={(e) => setInputText(e.target.value)}
+                                //onChange={inputTextHandler}
                             />
                         </label>
                         <br />
                         <input type="hidden" name="honeypot" defaultValue="" />
-                        <input
-                            className="form-field btn"
+                        <button
+                            className={`form-field btn ${
+                                clickedBtn ? "clicked" : ""
+                            }`}
                             name="submit"
                             type="submit"
-                            value="WYŚLIJ"
-                        />
+                            disabled={!validate()}
+                            //onClick={() => setClickedBtn(true)}
+                        >
+                            WYŚLIJ
+                        </button>
                     </form>
                 </div>
             )}
@@ -166,7 +191,7 @@ const ContactForm = () => {
                     </p>
                     <button
                         className="btn-write-again"
-                        onClick={() => setFormSent(false)}
+                        onClick={() => againMsgHandler()}
                     >
                         NOWA WIADOMOŚĆ
                     </button>

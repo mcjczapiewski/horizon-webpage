@@ -37,6 +37,7 @@
 
         textarea,
         input,
+        button,
         .btn-write-again {
             margin       : 15px 0;
             padding      : 5px 10px;
@@ -49,6 +50,15 @@
         .btn-write-again {
             color           : white;
             background-color: rgba(0, 172, 240, 0.7);
+
+            &[disabled] {
+                background-color: rgba(0, 172, 240, 0.214);
+                ;
+            }
+
+            &.clicked {
+                pointer-events: none;
+            }
         }
     }
 
