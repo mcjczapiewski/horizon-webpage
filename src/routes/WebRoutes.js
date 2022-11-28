@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "../components/Home";
 import Gallery from "../components/Gallery";
 /* import Projects from "../components/Projects"; */
@@ -8,28 +8,27 @@ import Prices from "../components/Prices";
 import About from "../components/About";
 import WhatIsIt from "../components/WhatIsIt";
 
-const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
-    <Switch>
-        <Route exact path="/" component={Home} />
+const WebRoutes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
+    <Routes>
+        <Route exact path="/" element={<Home />} />
         <Route
             exact
             path="/spacery-wirtualne"
-            render={(props) => (
+            element={
                 <Gallery
                     panoScroll={panoScroll}
                     setPanoScroll={setPanoScroll}
                     vtScroll={vtScroll}
                     setVtScroll={setVtScroll}
-                    {...props}
                 />
-            )}
+            }
         />
-        {/* <Route path="/projects" component={Projects} /> */}
-        <Route path="/contact" component={Contact} />
-        <Route path="/prices" component={Prices} />
-        <Route path="/about" component={About} />
-        <Route path="/whatisit" component={WhatIsIt} />
-    </Switch>
+        {/* <Route path="/projects" element={<Projects/>} /> */}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/prices" element={<Prices />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/whatisit" element={<WhatIsIt />} />
+    </Routes>
 );
 
-export default Routes;
+export default WebRoutes;

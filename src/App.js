@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Routes from "./routes/Routes";
+import WebRoutes from "./routes/WebRoutes";
 import CopyrightBar from "./components/CopyrightBar";
 import "./styles/style.css";
 import useResizeObserver from "use-resize-observer";
@@ -16,7 +16,7 @@ const App = () => {
             <Navbar setPanoScroll={setPanoScroll} setVtScroll={setVtScroll} />
             <div className="main" ref={scrollToTop}>
                 <div ref={ref} className="inner-main">
-                    <Routes
+                    <WebRoutes
                         panoScroll={panoScroll}
                         setPanoScroll={setPanoScroll}
                         vtScroll={vtScroll}
