@@ -56,7 +56,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
             <nav className="navbar-items">
                 <NavLink
                     className="navbar-logo"
-                    to="/aniapanato"
+                    to="/"
                     onClick={() => {
                         setClickedMenuBtn(false);
                     }}
@@ -83,7 +83,11 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                 <NavLink
                                     exact
                                     activeClassName="active"
-                                    className={cName}
+                                    className={`${cName} ${
+                                        title.toLowerCase() === "galeria"
+                                            ? "disabled"
+                                            : ""
+                                    }`}
                                     to={url}
                                     onClick={handleClick}
                                 >
@@ -115,7 +119,7 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                             to="/gallery"
                                             /* onClick={() => setVtScroll(true)} */
                                         >
-                                            SPACERY I PANORAMY
+                                            WNĘTRZA
                                         </Link>
                                         {/* <Link
                                             exact
@@ -124,8 +128,8 @@ const Navbar = ({ setPanoScroll, setVtScroll }) => {
                                         >
                                             Panoramy
                                         </Link> */}
-                                        <Link exact to="/gallery">
-                                            WNĘTRZA
+                                        <Link exact to="/spacery-wirtualne">
+                                            SPACERY I PANORAMY
                                         </Link>
                                     </div>
                                 </>

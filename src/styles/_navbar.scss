@@ -119,6 +119,10 @@
         &:hover {
             .nav-links {
                 color: black;
+
+                &.disabled {
+                    pointer-events: none;
+                }
             }
 
             .dropdown-menu {

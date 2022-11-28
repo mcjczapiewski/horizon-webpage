@@ -37,7 +37,7 @@ const Gallery = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => {
     } else {
         return (
             <div className="Gallery">
-                <h2 ref={vtRef}>Wirtualne spacery</h2>
+                <h2 ref={vtRef}>Spacery wirtualne</h2>
                 <div className="tours-gallery">
                     {galleryItems.map(
                         ({ title, url, cName, imgLink, type }) => {
