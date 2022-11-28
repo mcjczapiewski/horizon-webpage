@@ -10,10 +10,10 @@ import WhatIsIt from "../components/WhatIsIt";
 
 const Routes = ({ panoScroll, setPanoScroll, vtScroll, setVtScroll }) => (
     <Switch>
-        <Route exact path="/aniapanato" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route
             exact
-            path="/gallery"
+            path="/spacery-wirtualne"
             render={(props) => (
                 <Gallery
                     panoScroll={panoScroll}

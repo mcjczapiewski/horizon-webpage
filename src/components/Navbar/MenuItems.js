@@ -6,7 +6,7 @@ export const MenuItems = [
     },
     {
         title: "GALERIA",
-        url: "/gallery",
+        url: "",
         cName: "nav-links",
     },
     /* {

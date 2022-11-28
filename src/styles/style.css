@@ -525,6 +525,9 @@
 .nav-menu li:hover .nav-links {
   color: black;
 }
+.nav-menu li:hover .nav-links.disabled {
+  pointer-events: none;
+}
 .nav-menu li:hover .dropdown-menu {
   display: block;
 }
