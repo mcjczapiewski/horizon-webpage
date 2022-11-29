@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/horizon-webpage/static/css/main.60bd7950.css",
+    "main.js": "/horizon-webpage/static/js/main.986e9745.js",
+    "static/media/bg.jpg": "/horizon-webpage/static/media/bg.8c369cf0e557e412cb0c.jpg",
+    "static/media/guy-chart.png": "/horizon-webpage/static/media/guy-chart.d00dc28219b599309e14.png",
+    "static/media/maciek-cien.jpg": "/horizon-webpage/static/media/maciek-cien.81489e789cf5c812c17f.jpg",
+    "static/media/ania-cien.jpg": "/horizon-webpage/static/media/ania-cien.df3bda23a698f579e3c4.jpg",
+    "static/media/guy-trusted.png": "/horizon-webpage/static/media/guy-trusted.e5471c43f682de703077.png",
+    "static/media/trusted.png": "/horizon-webpage/static/media/trusted.c8daad003178dc4e08bb.png",
+    "static/media/logo.svg": "/horizon-webpage/static/media/logo.95b843486cc972b5fe1f4a7af5854b87.svg",
+    "static/media/inst.svg": "/horizon-webpage/static/media/inst.9ccb00c843588fc89ded04a95d79e648.svg",
+    "index.html": "/horizon-webpage/index.html",
+    "static/media/maps-icon.svg": "/horizon-webpage/static/media/maps-icon.76d304ec06273e668ff3da9fcdb9e5f0.svg",
+    "static/media/face.svg": "/horizon-webpage/static/media/face.531c7503232449891cfc9b5688c8bcd1.svg",
+    "static/media/chevron-right.svg": "/horizon-webpage/static/media/chevron-right.92da029ad57f344330c1c5a1b0dff594.svg",
+    "main.60bd7950.css.map": "/horizon-webpage/static/css/main.60bd7950.css.map",
+    "main.986e9745.js.map": "/horizon-webpage/static/js/main.986e9745.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60bd7950.css",
+    "static/js/main.986e9745.js"
+  ]
+}
